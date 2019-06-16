@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+
+  RuAin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+   <!-- Custom styles for this template -->
+    <!-- <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+ <link rel="icon" href="../Pics/ru1.jpg" type="image/jpg" sizes="32x32"> 
+<!--  <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+ <!-- yo chai text transformation ko  lagi  -->
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+ <!-- dfsdffffffffffffffffffffffffffffff-------------------------------------- -->  
+ <style>
+ .profi{
+  max-height:130px;
+  max-width:130px;
+ }
+.form-control{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+  margin-top: 10px;
+
+}
+.form-control[readonly].classname{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+}
+.form-control[readonly].classnamepro{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+}
+.form-control[readonly].classnameinadd{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+}
+
+.focus {
+    outline: 0;
+}
+.form-control.focus{
+    border-color: #cccccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+}
+.mrgo{
+  margin: 0px;
+}
+.hiddv{
+  display: none;
+}
+
+.hiddvindaddbtn{
+  display: none;
+}
+.hiddvindprf{
+   display: none; 
+}
+i.fa {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+
+}
+
+</style>
+<script>
+$(document).ready(function(){
+    $("#asas").mouseenter(function(){
+        // $("#colorcd").css("background-color", "yellow");
+        $("#btnclick").removeClass("hiddv");
+    });
+    $("#asas").mouseleave(function(){
+        $("#colorcd").css("background-color", "lightgray");
+         $("#btnclick").addClass("hiddv");
+    });
+
+      $("#profuse").mouseenter(function(){
+        // $("#colorcd").css("background-color", "yellow");
+        $("#profilbtnz").removeClass("hiddvindprf");
+    });
+    $("#profuse").mouseleave(function(){
+        // $("#colorcd").css("background-color", "lightgray");
+         $("#profilbtnz").addClass("hiddvindprf");
+    });
+
+});
+
+// this is for thee usernam 
+$(document).ready(function(){
+
+     $("#indhiddd").mouseenter(function(){
+        // $("#colorcd").css("background-color", "yellow");
+        $("#btnindiaddid").removeClass("hiddvindaddbtn");
+    });
+    $("#indhiddd").mouseleave(function(){
+        // $("#colorcd").css("background-color", "lightgray");
+         $("#btnindiaddid").addClass("hiddvindaddbtn");
+    });
+
+});
+
+
+
+// ----------------------
+
+
+$(document).ready(function(){
+    $("#btnindiaddid").click(function(){
+     $("#country").removeClass("classnameinadd");
+      $("#district").removeClass("classnameinadd");
+         $("#city").removeClass("classnameinadd") ;
+      // $(".classname").remove(); 
+    });
+});
+
+
+
+// ----------------------------for the profile------------------
+$(document).ready(function(){
+    $("#profilbtnz").click(function(){
+     // $(".colorcdpr").removeClass("classname"); 
+      $("#username").removeClass("classnamepro");
+        // $("readonly").remove();
+       $("#password").removeClass("classnamepro");
+      // $(".classname").remove(); 
+    });
+
+
+});
+
+//Tooltips Initialization
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</head>
+<body class="#fafafa grey lighten-4">
+  
+ <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mb-2" id="mainNav">
+    
+      <div class="container">
+
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><div style="height:60px;width:85px" class="ml-auto">
+          <img src="${pageContext.request.contextPath}/resources/Pics/ru4.jpg" style="height:60px;width:100%"><!-- <h3>RuAin </h3> --> </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <!-- this is for the search -->
+     <!--      <form class="form-inline">
+    <div class="input-group">
+
+
+      <input type="text" class="form-control glyphicon glyphicon-search " placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+    </div>
+  </form> -->
+    <form class="form-inline">
+          <div class="md-form my-0">
+              <input class="form-control mr-sm-3 border border-sucess pr-3 pl-2" type="text" placeholder="Search" aria-label="Search">
+          </div>
+         <!--  <button class="btn btn-outline-white btn-md my-2 my-sm-0" type="submit">Search</button> -->
+      </form>
+
+  <!-- this is for the search -->
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/gethomepage"><h6><Strong>Profile</Strong> </h6> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/getpostjobs"><h6><Strong>Post Jobs</Strong> </h6> </a>
+            </li>
+           
+             <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/gethejobpostlist"><h6><Strong>Manage Jobs </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/getpostjobsportal"><h6><Strong>Others </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/resources/Mannual.pdf"><h6><Strong>Help </Strong></h6></a>
+            </li> 
+       <%--       <li class="nav-item mr-5">
+              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/jobposterforumpostred"><h6><Strong>Forum </Strong></h6></a>
+            </li> --%>
+             <li class="nav-item right">
+                <a class="nav-link" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
+            </li>
+             <!-- Dropdown -->
+            <li class="nav-item dropdown ml-3">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+
+                 <!-- <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="18" alt=""> -->
+                   <img src="${pageContext.request.contextPath}/resources/images/${jobpsterimpl.primage}" style="height:30px;width:30px" class="rounded-circle img-fluid img-thumbnail">
+                 </a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/gethomepage"><small>Profile </small></a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/gethomepage"><small>Account Setting </small></a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/getlogout"><small>Logout </small></a>
+                     <%-- <a class="dropdown-item" onclick="deleteAccount(${jobpsterimpl.id})"><small>Delete Account </small></a> --%>
+                    <a class="dropdown-item" href="#" id="cmd"><small>Download </small></a>
+                </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      </div>
+    </nav>
+<!--/.Navbar-->
+
+<!-- ------------------this is for talako -->
+
+<div class="container">
+  <div class="row gutters mt-5 mb-5">
+   
+    <div class="col-6 col-md-3">
+ <!--Panel-->
+        <div class="card">
+            <h6 class="card-header bg-white lighten-1 black-text text-uppercase font-weight-bold text-center py-4"><small>Features List</small> </h6>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center border border:none">
+                     <a href="${pageContext.request.contextPath}/getalljoblistbynewDate"> <h6> <small> Sort by Date </small> </h6> </a>
+                        <span class="badge badge-primary badge-pill">1</span>
+                    </li>
+                
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                       <a href="${pageContext.request.contextPath}/gethejobpostlist"> <h6> <small> Sort with All Jobs </small></h6></a>
+                        <span class="badge badge-primary badge-pill">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="${pageContext.request.contextPath}/getalljobpostlistbyclosejobs"><h6> <small> Sort with CloseJobs </small></h6></a>
+                     </a>  <span class="badge badge-primary badge-pill">4</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                       <h6> <small> Sort with Others </small></h6>
+                        <span class="badge badge-primary badge-pill">5</span>
+                    </li>
+                </ul>
+                <!-- <p class="text-small text-muted mb-0 pt-3">* At vero eos et accusamus et iusto ducimus.</p> -->
+            </div>
+        </div>
+        <!--/.Panel-->
+    </div>
+     <div class="col-12 col-md-7 mb-5">
+     
+      <div class="card mt-2" id="indhiddd">
+<!--     <h5 class="card-header black-text pt-4 pb-4"><Strong>&emsp;My Job Lists </strong> <i class="fa fa-ellipsis-h fa-1x float-right text-success" aria-hidden="true"></i></h5>
+ -->
+          <div class="card col-sm-12 pb-2">
+          <form action="gethejobpostlistjobosterbysearchvalue" method="POST">
+          <div class="input-group mt-2" data-toggle="tooltip" data-placement="bottom" title="Search Jobs">
+          
+    <input class="form-control form-control-lg bg-white my-0 py-1 pt-2" type="text" placeholder="Search Jobs" aria-label="Search Jobs" name="jobname">
+    <div class="input-group-append">
+        <a class="input-group-text bg-white" id="basic-text1" type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+
+
+</div>
+ </form> 
+
+
+                  </div>
+    <div class="card-body mt-3">
+
+<!-- Card -->
+<!-- item is used to hold data -->
+	<c:forEach var="postjob" items="${nlist}">
+<div class="card mt-3">
+
+
+
+  <!-- Card content -->
+  <div class="card-body">
+<!-- <i class="fa fa-pencil prefix"></i> -->
+    <!-- Title -->
+    <h6 class="card-title"><a> <b>${postjob.jobname} </b> </a> <i class="fa fa-heart-o float-right fa-1x font-weight-bold text-success ml-2" aria-hidden="true"></i><i class="fa fa-pencil prefix" onclick="getjobpostById(${postjob.id})" data-toggle="tooltip" data-placement="bottom" title="Edit Jobs"></i>
+   <a type="button" class="btn-floating float-right" onclick="clossethejobpost(${postjob.id})" data-toggle="tooltip" data-placement="bottom" title="Close the Job"><i class="fa fa-thumbs-o-down text-success" aria-hidden="true"></i></a>
+    </h6>
+ <p class="card-text mt-3"> <small> <b>Job-Type:  ${postjob.jobtype} &emsp;</b> <b>Entry Level:</b> ${postjob.additionalrequirnment.entrylevel} ($$)
+    &emsp; Salary: ${postjob.salary}  Nrs &emsp; Posted: ${postjob.jobposteddate} </small></p>
+    <!-- Text -->
+     <h6> <small class="ml-1">${postjob.jobdescription} <br>
+  <b>Preference Skills: </b> <br>
+ ${postjob.additionalrequirnment.preferenceSkills}
+  <br>
+<b>Requirenment: </b>
+    <p class="card-text"> <small> <b>Experience: ${postjob.additionalrequirnment.experience} Yrs &emsp;</b> Deadline: ${postjob.deadline} &emsp; Resume: ${postjob.additionalrequirnment.resumejb} </small></p>
+
+   </small>  </h6>
+       <p class="card-text"> <small><!--  <b>Applicant - --> </b> Applicant: </small>  <small class="font-weight-bold black-text">Less than ${postjob.numberofapplicant} </small> <!-- <small> &emsp;Deadline:2018//8/8 </small> --> <br> <small class="card-text" style="font-size:12px">
+       <b>${jobpsterimpl.jobpostersecurity.username} </b> &emsp; <i class="fa fa-map-marker" aria-hidden="true"></i>  Location: ${jobpsterimpl.jobpostaddress.country}</small></p>
+  
+  <form action="getdeletePostjobbyid" method="POST">
+  <input type="hidden" value="${postjob.id}" name="id">
+<button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Delete Jobs">
+
+  Delete Jobs
+</button>
+
+</form>
+<button type="button" class="btn btn-primary" onclick="getjoblistbyidrrjbposterdetail(${postjob.id})" data-toggle="tooltip" data-placement="bottom" title="Details about jobs and Applier">
+
+  View Details
+</button>
+
+<%-- <button type="button" class="btn btn-primary" onclick="getjoblistbyidrr(${postjob.id})">
+  View Detail
+</button> --%>
+
+    <!-- Button -->
+    <!-- <a href="#" class="btn btn-primary">Button</a> -->
+
+  </div>
+  <!-- <hr> -->
+  <hr>
+ 
+</div>
+</c:forEach> 
+<!-- Card -->
+
+       
+
+    </div>
+</div>
+
+    </div>
+    	<script type="text/javascript">
+	function clossethejobpost(id){
+		window.location="${pageContext.request.contextPath}/"+id+"/clossethejobpost";
+	}
+	
+	function getjobpostById(id){
+		window.location="${pageContext.request.contextPath}/"+id+"/getjobpostById";
+	}
+	
+	
+	</script>
+	    <script type="text/javascript">
+  function getjoblistbyidrrjbposterdetail(id){
+    window.location="${pageContext.request.contextPath}/"+id+"/getjoblistbyidrrjbposterdetail";
+  }
+  </script>
+	
+    <div class="col-6 col-md-2">
+      <!-- .col-6 .col-md-4 dfgdffddffdfdfdgdfgdfgdfgdf
+      .col-6 .col-md-4 dfgdffddffdfdfdgdfgdfgdfgdf
+      .col-6 .col-md-4 dfgdffddffdfdfdgdfgdfgdfgdf
+      .col-6 .col-md-4 dfgdffddffdfdfdgdfgdfgdfgdf
+      .col-6 .col-md-4 dfgdffddffdfdfdgdfgdfgdfgdf.col-6  -->
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Footer links -->
+      <div class="row text-center text-md-left mt-3 pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">RuAin: <small>Find Relevant job's </small></h6>
+          <p>RuAin job portal site is the nepal biggest job finding portal. We welcome every one 
+          here for sharing, posting, applying and getting of jobs with the regulation of rules and regulation</p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Policies</h6>
+          <p>
+            <a href="#!">Legal Issue</a>
+          </p>
+          <p>
+            <a href="#!">How it works ? </a>
+          </p>
+          <p>
+            <a href="#!">option other/a>
+          </p>
+          <p>
+            <a href="#!">Option 2</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Helps</h6>
+          <p>
+            <a href="#!">Contact us</a>
+          </p>
+          <p>
+            <a href="#!">forum</a>
+          </p>
+          <p>
+            <a href="#!">Chat</a>
+          </p>
+          <p>
+            <a href="#!">Search</a>
+          </p>
+        </div>
+
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+          <p>
+            <i class="fa fa-home mr-3"></i> kadakhari, ktm 10012, Nepal</p>
+          <p>
+            <i class="fa fa-envelope mr-3"></i> ruainpro@gmail.com</p>
+          <p>
+            <i class="fa fa-phone mr-3"></i> + 977 9845 784532</p>
+          <p>
+            <i class="fa fa-print mr-3"></i> + 977 98111 36827</p>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Footer links -->
+
+      <hr>
+
+      <!-- Grid row -->
+      <div class="row d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8">
+
+          <!--Copyright-->
+          <p class="text-center text-md-left">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/bootstrap-tutorial/">
+              <strong> RuAin.Find Relevvant's jobs</strong>
+            </a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+
+          <!-- Social buttons -->
+          <div class="text-center text-md-right">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-google-plus"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+  </footer>
+  <!-- Footer -->
+
+</body>
+</html>
