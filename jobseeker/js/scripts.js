@@ -1,3 +1,4 @@
+
 $(function () {
 
     let tblBody = $("#tblbody");
@@ -39,8 +40,61 @@ $(function () {
 //         alert('Something went wrong!');
 //     }
 // });
+$("#file-To-Upload").on('change', function () {
+    let formData = new FormData();
+    let files = $("#file-To-Upload").get(0).files;
+    if (files.length > 0) {
+        formData.append("imageFile", files[0]);
+    }
+    // $("#add-hero").prop("disabled", true);
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:3000/uploads',
+        contentType: false,
+        cache: false,
+        processData: false,
+        data: formData,
+        success: function (data) {
+            imageFiles = data.filename;
+            // $("#add-hero").prop("disabled", false);
+        },
+        error: function () {
+            alert("Image upload failed!");
+        }
+    });
+});
+$("#update-job").on('click','.view', function (e) {
 
-    $("#add-hero").on('click', function (e) {
+    e.preventDefault();
+ 
+    console.log("hello");
+ 
+     let user = {
+        name: $("#name").val(),
+        JobType: $("#JobType").val(),
+        Applicant: $("#Applicant").val(),
+        Deadline: $("#Deadline").val(),
+        Salary: $("#Salary").val(),
+        Description: $("#description").val(),
+     };
+     console.log(user);
+     $.ajax({
+         type: 'PUT',
+         url: 'http://localhost:3000/jobposts/'+ $(this).attr('post_id'),
+         data: user,
+ 
+         success: function (user) {
+             alert("Registration Successful");
+             window.location.href = '/PostJobs.html';    
+         },
+         error: function () {
+             alert("Registration unSuccessful");
+            //  window.location.href = '/PostJobs.html'; 
+         }
+     });
+ })
+
+    $("#add-job").on('click', function (e) {
 
         e.preventDefault();
      
@@ -48,8 +102,12 @@ $(function () {
      
          let user = {
             name: $("#name").val(),
-            description: $("#desc").val(),
-             
+            JobType: $("#JobType").val(),
+            Applicant: $("#Applicant").val(),
+            Deadline: $("#Deadline").val(),
+            Salary: $("#Salary").val(),
+            Description: $("#description").val(),
+            image: imageFiles
          };
          console.log(user);
          $.ajax({
@@ -62,8 +120,8 @@ $(function () {
                  window.location.href = '/PostJobs.html';    
              },
              error: function () {
-                 alert("Registration Successful");
-                 window.location.href = '/PostJobs.html'; 
+                 alert("Registration unSuccessful");
+                //  window.location.href = '/PostJobs.html'; 
              }
          });
      });
@@ -155,4 +213,26 @@ $(function () {
          });
      });
     
+     function rowTemplate(hero) {
+        let oneRow = '<div class="card-body">'+ '<img src= ' + base_url + "uploads/" + hero.image  +'&nbsp;'+ "width=50px>"+ ' <h6 class="card-title">Job name:&nbsp;'+hero.name + 
+        '</h6>' + '<p><small class="ml-1">job type:&nbsp; '+hero.JobType + '</p>'+'<b>Preference Skills: </b>'+hero.Description+'<br><br><b>Total Applicant: </b>'+hero.Applicant+'<p class="card-text mt-3"><b>Deadline: </b>'+hero.Deadline +'<br><b>Salary: </b>'+hero.Salary+'</div><hr>';
+      
+        return oneRow;
+    }
+
+    $.ajax({
+        type: 'GET',
+        url: base_url + 'jobposts',
+        success: function (heroes) {
+            let myRows = [];
+            $.each(heroes, function (index, hero) {
+                myRows.push(rowTemplate(hero));
+            });
+            tblBody.append(myRows);
+        },
+        error: function () {
+            alert('Something went wrong!');
+        }
+    });
+   
 });

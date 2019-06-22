@@ -277,9 +277,7 @@ $(window).on('load', function () {
 
 </head>
 <body class="#fafafa grey lighten-5">
-  <%--  <%
-   int chk={jobpsterimpl.visitrc};
-  %> --%>
+ 
   
  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white mb-2" id="mainNav">
@@ -287,7 +285,7 @@ $(window).on('load', function () {
       <div class="container">
 
         <a class="navbar-brand js-scroll-trigger" href="#page-top"><div style="height:60px;width:85px" class="ml-auto">
-          <img src="${pageContext.request.contextPath}/resources/Pics/ru4.jpg" style="height:60px;width:100%"><!-- <h3>RuAin </h3> --> </a>
+          <img src="images/logo.png" style="height:40px;width:120px"><!-- <h3>RuAin </h3> --> </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon "></span>
@@ -302,9 +300,7 @@ $(window).on('load', function () {
     </div>
   </form> -->
     <form class="form-inline" action="gethejobpostlistjobosterbysearchvalue" method="POST">
-          <div class="md-form my-0">
-              <input class="form-control mr-sm-3 border border-sucess pr-3 pl-2" type="text" placeholder="Search" aria-label="Search">
-          </div>
+          
          <!--  <button class="btn btn-outline-white btn-md my-2 my-sm-0" type="submit">Search</button> -->
       </form>
 
@@ -312,45 +308,36 @@ $(window).on('load', function () {
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/gethomepage"><h6><Strong>Profile</Strong> </h6> </a>
+              <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/getpostjobs"><h6><Strong>Post Jobs</Strong> </h6> </a>
+              <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>Post Jobs</Strong> </h6> </a>
             </li>
-           
+            <li class="nav-item">
+                <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong>Manage job post </Strong></h6></a>
+              </li>
              <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/gethejobpostlist"><h6><Strong>Manage Jobs </Strong></h6></a>
+              <a class="nav-link text-dark js-scroll-trigger" href="jobslistJobSeekeerindappliedjobs.html"><h6><Strong>Manage Jobs </Strong></h6></a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/getpostjobsportal"><h6><Strong>Others </Strong></h6></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/resources/Mannual.pdf"><h6><Strong>Help </Strong></h6></a>
-            </li> 
-       <%--       <li class="nav-item mr-5">
-              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/jobposterforumpostred"><h6><Strong>Forum </Strong></h6></a>
-            </li> --%>
-             <li class="nav-item right">
+           
              
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#modaladminmessage"><i class="fa fa-comment-o" aria-hidden="true"></i><span class="badge red z-depth-1 mr-1"> <small><c:forEach var="getAllbyadminmessagebycount" items="${getAllbyadminmessagebycount}">${getAllbyadminmessagebycount}</c:forEach></small> </span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
-            </li>
              <!-- Dropdown -->
             <li class="nav-item dropdown ml-3">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
 
                  <!-- <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="18" alt=""> -->
-                   <img src="${pageContext.request.contextPath}/resources/images/${jobpsterimpl.primage}" style="height:30px;width:30px" class="rounded-circle img-fluid img-thumbnail">
+                   <img src="images/logo.png" style="height:30px;width:30px" class="rounded-circle img-fluid img-thumbnail">
                  </a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/gethomepage"><small>Profile </small></a>
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/gethomepage"><small>Account Setting </small></a>
+                    <a class="dropdown-item" href="jobposterProfile.html"><small>Profile </small></a>
+                    <a class="dropdown-item" href="jobposterProfile.html"><small>Account Setting </small></a>
                     <a class="dropdown-item" href="${pageContext.request.contextPath}/getlogout"><small>Logout </small></a>
-                     <a class="dropdown-item" onclick="deleteAccount(${jobpsterimpl.id})"><small>Delete Account </small></a>
-                    <a class="dropdown-item" href="#" id="cmd"><small>Download </small></a>
+                     
+                   
                 </div>
             </li>
           </ul>
@@ -397,7 +384,7 @@ $(window).on('load', function () {
       
 
             </div>
-<%-- <c: var="jobposter" items="${jobpsterimpl}"> --%>
+
 
     <div class="card-body" id="colorcdpr">
       <h5 class="font-weight-bold deep-orange-lighter-hover mb-3 text-md-right">Profiles</h5>
@@ -430,9 +417,9 @@ $(window).on('load', function () {
         <h6 class="card-title">
       <!--  <div class="view mx-auto white mb-3"><img src="aa.jpg" class="rounded-circle img-fluid" style="height:120px;width:120px">
     </div> -->   
-<h6 class="indigo-text"> <strong> ${jobpsterimpl.firstname} ${jobpsterimpl.lastname}</strong></h6>
-<h6 class="indigo-text" style="font">20, ${jobpsterimpl.contactno} , ${jobpsterimpl.dob}</h6>
-<h6 class="indigo-text">${jobpsterimpl.email}</h6>
+<h6 class="indigo-text"> <strong> Bibash kc</strong></h6>
+<h6 class="indigo-text" style="font">20, 9808858910 , 1996-05-23</h6>
+<h6 class="indigo-text">bibash1996@gmail.com</h6>
 
 
 
@@ -444,20 +431,33 @@ $(window).on('load', function () {
           <h6 class="indigo-text"><strong>
 
           </strong></h6>
-         <h6 class="indigo-text text-md-right" id="aasssssssd"><strong> <i class="fa fa-map-marker" aria-hidden="true"></i> Location</strong> &nbsp; <%= new java.util.Date() %></h6>
+         <h6 class="indigo-text text-md-right" id="aasssssssd"><strong> <i class="fa fa-map-marker" aria-hidden="true"></i> Location</strong> &nbsp; kathmandu</h6>
         <hr>
         <i class="fa fa-pencil prefix"></i>
      <label for="textareaPrefix"> <Strong> &emsp; Description: </Strong> </label> <br>
      <!-- <hr> -->
 <p class="pl-4"> 
-Mr. ${jobpsterimpl.firstname} ${jobpsterimpl.lastname} has Joined the RuAin: Find Releevant's Jobs System. Mr ${jobpsterimpl.firstname} ${jobpsterimpl.lastname} has
-agreed all the terms and regulation along with the RuAin Company Policy.
-${jobpsterimpl.firstname} ${jobpsterimpl.lastname} agreed to Maintain, regulated the Privacy Policy and etc.<br>
-As a Job Provider he want to provide jobs for Job Seeker. He must belief on making the Community to reduce the 
-Unemployment in the Community andd help to make the Community for Better Place.
+    I am one of the DBA in this huge IT industry with a desire to be a renowned DBA in this huge IT industry.
+    I am a workaholic person but with a friendly side and can't resist till I finish the assigned work.
+    I might get little strict but that is just because I like things to be as perfect as possible.
+    I like challenges and have a huge heart for SQL databases or SQL Projects.
+    
+    
+    Databases:
+    1. SQL-Server
+    2. Oracle
+    3. Mysql
+    4. MongoDB
+    5.Vertica
+    
+    Programming Languages:
+    1. Shell Scripting
+    2. Python
+    3. Powershell
+    4. C/C++
 </p>
 
-<%--  </c:forEach>  --%>
+
 <!-- -----------md for ko -->
 <!-- --------------------------card body ko------------------- -->
  
@@ -539,11 +539,11 @@ Unemployment in the Community andd help to make the Community for Better Place.
         <!-- <h6 class="card-title">Username</h6> -->
   <div class="mt-2 mb-2">
   <h6> <small>Username</small> </h6>
-  <h6 class="deep-purple-text">${jobpsterimpl.jobpostersecurity.username} </h6>
+  <h6 class="deep-purple-text">bibashck </h6>
 </div>
 <div class="mt-3 mb-3">
   <h6> <small>Password</small> </h6>
-  <h6 class="deep-purple-text"> ${jobpsterimpl.jobpostersecurity.password} </h6>
+  <h6 class="deep-purple-text"> bibashck </h6>
 </div>
             <button class="btn btn-success btn-rounded float-right hiddvindprf " type="submit" id="profilbtnz" data-toggle="modal" data-target="#modalLoginForm">Update</button>
 
@@ -629,31 +629,11 @@ Unemployment in the Community andd help to make the Community for Better Place.
                 <div class="md-form">
                     <i class="fa fa-envelope prefix grey-text"></i>
                      <label data-error="wrong" data-success="right" for="defaultForm-email"> <small class="indigo-text">Country </small></label> <br>
-                    <input type="text" id="defaultForm-email" class="form-control validate mt-1" value="${jobpsterimpl.jobpostaddress.country}" name="country">
+                    <input type="text" id="defaultForm-email" class="form-control validate mt-1" value="Nepal" name="country">
                    
                 </div>
 
-                <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">District </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.jobpostaddress.district}" name="district">
-                  
-                </div>
-                <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">City </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.jobpostaddress.city}" name="city">
-
-
-                  
-                </div>
-                  <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">Streetaddress </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.jobpostaddress.staddress}" name="staddress">
-                  
-                </div>
-                <%-- </c:forEach> --%>
+               
 
             </div>
             <div class="modal-footer d-flex justify-content-center">
@@ -740,24 +720,12 @@ Unemployment in the Community andd help to make the Community for Better Place.
        <div class="card" id="indhiddd">
     <h5 class="card-header primary-color white-text"><Strong>Individual Address </strong></h5>
     <div class="card-body">
-<%-- <c:forEach var="jobpostaddress" items="jobposteraddressad">  --%>
+
     <div class="mt-2 mb-2">
   <h6> <small>Country</small> </h6>
-  <h6 class="deep-purple-text">${jobpsterimpl.jobpostaddress.country}</h6>
+  <h6 class="deep-purple-text">Nepal</h6>
 </div>
-<div class="mt-3 mb-3">
-  <h6> <small>District</small> </h6>
-  <h6 class="deep-purple-text"> ${jobpsterimpl.jobpostaddress.district} </h6>
-</div>
-     <div class="mt-2 mb-2">
-  <h6> <small>City</small> </h6>
-  <h6 class="deep-purple-text"> ${jobpsterimpl.jobpostaddress.city} </h6>
-</div>
-<div class="mt-3 mb-3">
-  <h6> <small>Street-Address</small> </h6>
-  <h6 class="deep-purple-text"> ${jobpsterimpl.jobpostaddress.staddress}</h6>
-</div>
-<%--    </c:forEach>  --%>     
+  
       
 <button class="btn btn-success btn-rounded float-right hiddvindaddbtn" type="submit" id="btnindiaddid" data-toggle="modal" data-target="#modalLoginFormaddind">Update</button>
 <!-- <button class="btn btn-success btn-rounded float-right hiddvindaddbtn" type="submit" id="btnindiaddid">Cancel</button> -->
@@ -952,7 +920,7 @@ data-backdrop="false">
         <div class="col-md-7 col-lg-8">
 
           <!--Copyright-->
-          <p class="text-center text-md-left">© 2018 Copyright:
+          <p class="text-center text-md-left">ï¿½ 2018 Copyright:
             <a href="https://mdbootstrap.com/bootstrap-tutorial/">
               <strong> RuAin.Find Relevvant's jobs</strong>
             </a>

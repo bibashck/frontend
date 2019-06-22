@@ -73,58 +73,7 @@
     margin-top: 0; }
 
 </style>
-<script type="text/javascript">
-  $(document).ready(function () {
-    var navListItems = $('div.setup-panel div a'),
-        allWells = $('.setup-content'),
-        allNextBtn = $('.nextBtn'),
-        allPrevBtn = $('.prevBtn');
 
-    allWells.hide();
-
-    navListItems.click(function (e) {
-        e.preventDefault();
-        var $target = $($(this).attr('href')),
-            $item = $(this);
-
-        if (!$item.hasClass('disabled')) {
-            navListItems.removeClass('btn-indigo').addClass('btn-default');
-            $item.addClass('btn-indigo');
-            allWells.hide();
-            $target.show();
-            $target.find('input:eq(0)').focus();
-        }
-    });
-
-    allPrevBtn.click(function(){
-        var curStep = $(this).closest(".setup-content"),
-            curStepBtn = curStep.attr("id"),
-            prevStepSteps = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
-
-            prevStepSteps.removeAttr('disabled').trigger('click');
-    });
-
-    allNextBtn.click(function(){
-        var curStep = $(this).closest(".setup-content"),
-            curStepBtn = curStep.attr("id"),
-            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-            curInputs = curStep.find("input[type='text'],input[type='url']"),
-            isValid = true;
-
-        $(".form-group").removeClass("has-error");
-        for(var i=0; i< curInputs.length; i++){
-            if (!curInputs[i].validity.valid){
-                isValid = false;
-                $(curInputs[i]).closest(".form-group").addClass("has-error");
-            }
-        }
-
-        if (isValid)
-            nextStepWizard.removeAttr('disabled').trigger('click');
-    });
-
-    $('div.setup-panel div a.btn-indigo').trigger('click');
-});
 </script>
 </head> 
 <body>
@@ -151,17 +100,14 @@
             <div class="steps-row setup-panel">
                 <div class="steps-step">
                     <a href="#step-9" type="button" class="btn btn-indigo btn-circle">1</a>
-                    <p>Job Details ${ActiveUserID}</p>
+                    <p>Job Details </p>
                 </div>
-                <div class="steps-step">
-                    <a href="#step-10" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                    <p>Additional Criteria</p>
-                </div>
+               
          
             </div>
         </div>
 
-        <form role="form" action="postjobsconli" method="post">
+        <form role="form" >
 
             <!-- First Step -->
             <div class="row setup-content" id="step-9">
@@ -169,91 +115,58 @@
                     <h3 class="font-weight-bold pl-0 my-4"><strong>Job Details</strong></h3>
                                            
 
-         <div class="md-form col-md-8">
-    <i class="fa fa-street-view prefix" aria-hidden="true"></i> 
-    <label for="inputIconEx1"><small> &emsp; JobName (required) </small></label>  <br>
-   <!-- <i class="fa fa-street-view prefix" aria-hidden="true"></i>  -->
-    <input type="text" id="inputIconEx1" class="form-control" required="required" name="jobname" >
-    
-</div>
-    <div class="md-form col-md-8">
-   <i class="fa fa-tasks prefix"></i>
-    <label for="inputIconEx1"><small> &emsp; JobType (required) </small></label>  <br>
-    <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
-    <input type="text" id="inputIconEx1" class="form-control" required="required" name="jobtype" class="mt-3">
-    
-</div>
-
-        
-              <div class="md-form col-md-8">
-    <i class="fa fa-envelope prefix"></i>
-    <label for="inputIconEx1"><small> &emsp; Number of Applicant (required) </small></label>  <br>
-    <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
-    <input type="text" id="inputIconEx1" class="form-control" required="required" name="numberofapplicant">
-    
-</div>
-
-
-
-
-
-                          <div class="md-form col-md-10">
-                            <!-- <i class="" aria-hidden="true"></i> -->
-         <i class="fa fa-address-book-o prefix"></i>
-    <label for="inputIconEx1"><small> &emsp; Deadline (required)</small></label>  <br>
-    <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
-    <input type="date" id="inputIconEx1" class="form-control" required="required" name="deadline">
-    
-</div>
-                      <div class="md-form col-md-10">
+                    <div class="md-form col-md-8">
+                            <i class="fa fa-street-view prefix" aria-hidden="true"></i> 
+                            <label for="inputIconEx1"><small> &emsp; JobName (required) </small></label>  <br>
+                           <!-- <i class="fa fa-street-view prefix" aria-hidden="true"></i>  -->
+                            <input type="text" id="name" class="form-control" required="required" name="jobname" >
+                            
+                        </div>
+                        <div class="md-form col-md-8">
+                                <i class="fa fa-tasks prefix"></i>
+                                 <label for="inputIconEx1"><small> &emsp; JobType (required) </small></label>  <br>
+                                 <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
+                                 <input type="text" id="JobType" class="form-control" required="required" name="jobtype" class="mt-3">
+                                 
+                             </div>
+                             <div class="md-form col-md-8">
+                                    <i class="fa fa-envelope prefix"></i>
+                                    <label for="inputIconEx1"><small> &emsp; Number of Applicant (required) </small></label>  <br>
+                                    <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
+                                    <input type="number" id="Applicant" class="form-control" required="required" name="numberofapplicant">
+                                    
+                                </div>
+                                <div class="md-form col-md-10">
                 
-         <i class="fa fa-firefox prefix"></i>
-    <label for="inputIconEx1"><small class="text-monospace">&emsp; Salary </small></label>  <br>
-    <input type="number" id="inputIconEx1" class="form-control" required="required" name="salary">
-
+                                        <i class="fa fa-firefox prefix"></i>
+                                   <label for="inputIconEx1"><small class="text-monospace">&emsp; Salary </small></label>  <br>
+                                   <input type="number" id="Salary" class="form-control" required="required" name="salary">
+                               
+                                   
+                               </div>
+                               <div class="md-form col-md-10">
+                                    <!-- <i class="" aria-hidden="true"></i> -->
+                 <i class="fa fa-address-book-o prefix"></i>
+            <label for="inputIconEx1"><small> &emsp; Deadline (required)</small></label>  <br>
+            <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
+            <input type="date" id="Deadline" class="form-control" required="required" name="deadline">
+            
+        </div>
     
-</div>
-<!--Textarea with icon prefix-->
-<div class="md-form">
-    <i class="fa fa-pencil prefix"></i>
-        <label for="textareaPrefix">Job Description <small> ( Min 120 words required)</small></label> <br>
-    <textarea type="text" id="textareaPrefix" class="form-control md-textarea" rows="8" minlength="120" required="required" name="jobdescription"></textarea>
-
-</div>
+                               <div class="md-form">
+                                    <i class="fa fa-pencil prefix"></i>
+                                        <label for="textareaPrefix">Job Description <small> ( Min 120 words required)</small></label> <br>
+                                    <textarea type="text" id="description" class="form-control md-textarea" rows="8" minlength="120" required="required" name="jobdescription"></textarea>
+                                
+                                </div>
                    
-                    <button class="btn btn-indigo btn-rounded nextBtn float-right" type="button">Next</button>
-                     <button class="btn btn-indigo btn-rounded nextBtn float-right" type="button">Skip Additional Requirnmeent</button>
-                </div>
-            </div>
+     
 
-            <!-- Second Step -->
-            <div class="row setup-content" id="step-10">
-                <div class="col-md-12">
 
-                    <h3 class="font-weight-bold pl-0 my-4"><i class="fa fa-address-card-o" aria-hidden="true" prefix > &nbsp;</i><strong>Assitional Requirnment:</strong></h3>
-                    
-                    <div class="form-group md-form col-md-6">
-                        <label for="Entrylabel" data-error="wrong" data-success="right"> <small>&emsp; Entry Level </small></label> <br>
-                        <input id="Entrylabel" type="text" required="required" class="form-control validate" required="required" name="Additionalrequirnment.entrylevel">
-                    </div>
-                    <div class="form-group md-form mt-3 col-md-6">
-                        <label for="experience" data-error="wrong" data-success="right"><small>&emsp; Experience (required) </small></label><br>
 
-                        <input id="experience" type="text" required="required" class="form-control validate" required="required" name="Additionalrequirnment.Experience">
-<%--                 <input id="experience" type="number" class="form-control validate" name="jbpstrpstid_id" value="${ActiveUserID}">
- --%>                    </div>
-                     <div class="form-group md-form mt-3 col-md-6">
-                        <label for="prefrskls" data-error="wrong" data-success="right"><small> &emsp; Preference Skills (required)</small></label><br>
 
-                        <input id="prefrskls" type="text" required="required" class="form-control validate" required="required" name="Additionalrequirnment.preferenceSkills">
-                    </div>
-                     <div class="form-group md-form mt-3 col-md-6">
-                        <label for="companyAddress" data-error="wrong" data-success="right"><small>&emsp; Resume </small></label><br>
-
-                        <input id="companyAddress" type="text" required="required" class="form-control validate" required="required" name="Additionalrequirnment.resumejb">
-                    </div>
-                    <button class="btn btn-indigo btn-rounded prevBtn float-left" type="button">Previous</button>
-                    <button class="btn btn-indigo btn-rounded nextBtn float-right" type="submit">Submit</button>
+                      
+                    <button id="add-job" class="btn btn-indigo btn-rounded nextBtn float-right" type="submit" >Submit</button>
                 </div>
             </div>
 
@@ -266,5 +179,22 @@
                 </div>
               </div>
             </div>
+            <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"
+          ></script>
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+          ></script>
+          <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+          ></script>
+      
+          <script src="js/scripts.js"></script>
 </body>
 </html>

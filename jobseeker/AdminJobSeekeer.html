@@ -76,78 +76,29 @@
 <br>
 <br>
 <div class="container">
-    <div class="row">
- <!-- <div class="col-sm-2">col-sm-8</div> -->
-  <div class="col-sm-11 ml-5">
-  	
-
-	<table id="example" class="table table-striped table-bordered nowrap mt-5" style="width:100%">
-        <thead>
-      
-            <tr>
-                <th>Profile
-      </th>
-      <th>Name
-      </th>
-      <th>Username
-      </th>
-      <th>Address
-      </th>
-      <th>Email
-      </th>
-      <th>Reported Status
-      </th>
-      <th>Actions
-      </th>
-
-            </tr>
-        </thead>
-        <tbody>
-        
-          <c:forEach var="jobseeker" items="${slistjbseekr}">
-            <tr>
-                <td><img src="${pageContext.request.contextPath}/resources/images/${jobseeker.primage}" style="height:60px;width:100%"></td>
-                <td>${jobseeker.firstname} ${jobseeker.lastname}</td>
-                <td>${jobseeker.jobseeksecurity.username}</td>
-                <td><small> ${jobseeker.jobseaddress.country},${jobseeker.jobseaddress.city}, ${jobseeker.jobseaddress.district} ,${jobseeker.jobseaddress.country} </small></td>
-                <td>${jobseeker.email}</td>
-                 <td>${jobseeker.reportcndtn}</td>
-                 <td> <a type="button" class="btn-floating float-right ml-2" data-toggle="tooltip" data-placement="top" title="Delete Job Seeker"><i class="fa fa-thumbs-o-down text-success fasadsa" aria-hidden="true" onclick="getdeletejobseekerforadmin(${jobseeker.id})"></i></a>
-                  <a type="button" class="btn-floating"><i class="fa fa-heart-o float-right fa-1x font-weight-bold text-success ml-3 fasadsa" aria-hidden="true"></i> </a> </td>
-              
-            </tr>
-          
-         </c:forEach>
-         
-        </tbody>
-        <tfoot>
-            <tr>
-                
-
-                <th>Profile
-      </th>
-      <th>Name
-      </th>
-      <th>Username
-      </th>
-      <th>Address
-      </th>
-      <th>Email
-      </th>
-      <th>Reported Status
-      </th>
-      <th>Actions
-      </th>
-    
-       
-
-            </tr>
-        </tfoot>
-    </table>
-  </div>
-</div>
-    
+    <div class="row header" style="text-align:center;color:green">
+    <!-- <h3>Bootstrap Table With sorting,searching and paging using dataTable.js (Responsive)</h3> -->
     </div>
+    <table id="myTable" class="table table-striped" >  
+            <thead>  
+              <tr>  
+                <th>Post Name</th>  
+                
+                
+                <th>Remove</th>
+              </tr>  
+            </thead>  
+            <tbody>
+                <tbody id="tblbody5"></tbody>
+              </tbody>
+          </table>  
+        </div>
+
+
+  <!-- Button -->
+  <!-- <a href="#" class="btn btn-primary">Button</a> -->
+
+</div>
 
 	<hr>
 	
@@ -166,6 +117,6 @@
 	    $('#myTable').DataTable();
 	} );
 	</script>
-
+<script src="js/adminscripts.js"></script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -298,9 +297,7 @@ $(window).on('load', function () {
 
 </head>
 <body class="#fafafa grey lighten-5">
-  <%--  <%
-   int chk={jobpsterimpl.visitrc};
-  %> --%>
+ 
   
  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white mb-2" id="mainNav">
@@ -394,13 +391,13 @@ $(window).on('load', function () {
  
    <div class="form-inline mt-4">
 
-<%--      <div class="avatar mx-3 white"><img src="${pageContext.request.contextPath}/resources/images/${jobseekerimplgtid.primage}" class="rounded-circle profi border border-primary"> 
- --%>
+      <div class="avatar mx-3 white"><img src="${pageContext.request.contextPath}/resources/images/${jobseekerimplgtid.primage}" class="rounded-circle profi border border-primary"> 
+ 
 <!-- </div> -->
       
 
             </div>
-<%-- <c: var="jobposter" items="${jobpsterimpl}"> --%>
+
 
     <div class="card-body" id="colorcdpr">
       <h5 class="font-weight-bold deep-orange-lighter-hover mb-3 text-md-right">Profiles</h5>
@@ -413,15 +410,15 @@ $(window).on('load', function () {
          <div class="circle">
        <!-- User Profile Image -->
        <img class="profile-pic" src="${pageContext.request.contextPath}/resources/images/${jobseekerimplgtid.primage}">
-fdgdfgdsf
+
   
      </div>
  
      
-   <%--   <div class="p-image">
+    <div class="p-image">
        <i class="fa fa-camera upload-button"></i>
         <input class="file-upload" value="${pageContext.request.contextPath}/resources/images/${jobseekerimplgtid.primage}" type="file" accept="image/*"/>
-     </div> --%>
+     </div>
 
   
 
@@ -437,11 +434,11 @@ fdgdfgdsf
         <h6 class="card-title">
       <!--  <div class="view mx-auto white mb-3"><img src="aa.jpg" class="rounded-circle img-fluid" style="height:120px;width:120px">
     </div> -->   
-<h6 class="indigo-text"> <strong> ${jobseekerimplgtid.firstname} ${jobseekerimplgtid.lastname}</strong></h6>
-<h6>20, ${jobseekerimplgtid.dob} , ${jobseekerimplgtid.contactno}</h6>
-<h6>${jobseekerimplgtid.email}</h6>
+<h6 class="indigo-text"> <strong>bibash kc</strong></h6>
+<h6>20,</h6>
+<h6>bibash1996@gmail.com</h6>
 
-
+ 
 
 
             </div> 
@@ -451,14 +448,14 @@ fdgdfgdsf
           <h6 class="indigo-text"><strong>
 
           </strong></h6>
-         <h6 class="indigo-text text-md-right" id="aasssssssd"><strong> <i class="fa fa-map-marker" aria-hidden="true"></i> Location</strong> &nbsp; <%= new java.util.Date() %></h6>
+         <h6 class="indigo-text text-md-right" id="aasssssssd"><strong> <i class="fa fa-map-marker" aria-hidden="true"></i> Location</strong> &nbsp; kathmandu</h6>
         <hr>
         <i class="fa fa-pencil prefix"></i>
      <label for="textareaPrefix"> <Strong> &emsp; Description: </Strong> </label> <br>
      <!-- <hr> -->
+     
 <p class="pl-4">
-Mr. ${jobseekerimplgtid.firstname} ${jobseekerimplgtid.lastname} has Joined the RuAin: Find Releevant's Jobs System.
- Mr ${jobseekerimplgtid.firstname} ${jobseekerimplgtid.lastname} has agreed all the terms and regulation along with the RuAin Company Policy.
+Mr.  has agreed all the terms and regulation along with the RuAin Company Policy.
   He agreed to Maintain, regulated the Privacy Policy and etc.
 As a Job Seeker he want to Find jobs for Job Poster.
  He must belief on making the Community to reduce the Unemployment in the Community and help to make the Community for Better Place.
@@ -467,7 +464,7 @@ As a Job Seeker he want to Find jobs for Job Poster.
  </p>
 
 
-<%--  </c:forEach>  --%>
+
 <!-- -----------md for ko -->
 <!-- --------------------------card body ko------------------- -->
  
@@ -477,7 +474,17 @@ As a Job Seeker he want to Find jobs for Job Poster.
 <!-- </div> -->
 <!-- Card -->
 
-
+<table class="table col-sm-12">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="tblbody"></tbody>
+        </table>
     <!-- </div> -->
         <div class="col-md-12 mt-5">
       <div class="card card-body">
@@ -509,72 +516,6 @@ As a Job Seeker he want to Find jobs for Job Poster.
 
     <div class="col-md-3 ml-4">
 
-   <!-- <h3 class="card-header primary-color white-text">Profile Setting</h3> -->
-   <div class="card mt-5" id="profuse">
-    <!-- <h5 class="card-header primary-color white-text display-6"><Strong>Profile Setting </strong></h5> -->
-    <h4>  <a href="#!" class="badge badge-white ml-5 pb-2 pt-2 pl-4 pr-5 mt-3 border"> <small class="green-text">Security Setting </small></a>  </h4>
-    
-    <div class="card-body">
-        <!-- <h6 class="card-title">Username</h6> -->
-  <div class="mt-2 mb-2">
-  <h6> <small>Username</small> </h6>
-  <h6 class="deep-purple-text"> ${jobseekerimplgtid.jobseeksecurity.username} </h6>
-</div>
-<div class="mt-3 mb-3">
-  <h6> <small>Password</small> </h6>
-  <h6 class="deep-purple-text"> ${jobseekerimplgtid.jobseeksecurity.password} </h6>
-</div>
-            <button class="btn btn-success btn-rounded float-right hiddvindprf " type="submit" id="profilbtnz" data-toggle="modal" data-target="#modalLoginForm">Update</button>
-
-
-    </div>
-</div>
-
-
-
-
-
-
-
-<div class="modal fade" id="modalupdatejobseekerskills" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Job Seeker SKills</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="getupdatejobseekeerskillsifo" method="POST">
-            <div class="modal-body mx-3">
-                <div class="md-form mb-5">
-                    <i class="fa fa-envelope prefix grey-text"></i>
-                    <label data-error="wrong" data-success="right" for="defaultForm-email">Education Status</label> </Br>
-                    <input type="text" id="defaultForm-email" class="form-control validate" name="educationLevel" value="${jobseekerimplgtid.jobSeeSkills.educationLevel}">
-                    
-                </div>
-
-                <div class="md-form mb-4">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Skills</label> </br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate" name="skills" value="${jobseekerimplgtid.jobSeeSkills.skills}">
-                
-                </div>
-
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-default" type="Submit">Update</button>
-            </div>
-
-</form>
-        </div>
-
-    </div>
-
-</div>
-
-
 
 
 
@@ -596,50 +537,6 @@ As a Job Seeker he want to Find jobs for Job Poster.
 
 <!-- ---------------------------profile model------------------------- -->
 
-<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-    <form action="updatejobseekersecur" method="POST" >
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Security </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-          
-           <div class="modal-body mx-1">
-                <div class="md-form">
-                    <i class="fa fa-envelope prefix grey-text"></i>
-                     <label data-error="wrong" data-success="right" for="defaultForm-email"> <small>Username </small></label> <br>
-                    <input type="text" id="defaultForm-email" class="form-control validate" value="${jobseekerimplgtid.jobseeksecurity.username}" name="username">
-                   
-                </div>
-
-                <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small>password </small></label> <br>
-                    <input type="password" id="defaultForm-pass" class="form-control validate" value="${jobseekerimplgtid.jobseeksecurity.password}" name="password">
-<%--                    <input type="text" id="defaultForm-pass" class="form-control validate" value="${jobpsterimpl.jobpostersecurity.jobtype}" name="jobtype">
- --%>                
-                </div>
-                <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small>Re-password </small></label> <br>
-                    <input type="password" id="defaultForm-pass" class="form-control validate">
-                  
-                </div>
-               
-
-            </div>
-          
-            <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-default">Update</button>
-            </div>
-            
-        </div>
-        </form>
-    </div>
-</div>
 
 <!-- 	<script type="text/javascript">
 	function editstudent(id){
@@ -657,199 +554,13 @@ As a Job Seeker he want to Find jobs for Job Poster.
 
 <!-- ---------------------------indaddress model------------------------- -->
 
-<div class="modal fade" id="modalLoginFormaddind" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-     
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Individual Address </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-             <form action="updatejobseekeraddress" method="POST" >
-            <div class="modal-body mx-3">
-                <div class="md-form">
-                    <i class="fa fa-envelope prefix grey-text"></i>
-                     <label data-error="wrong" data-success="right" for="defaultForm-email"> <small class="indigo-text">Country </small></label> <br>
-                    <input type="text" id="defaultForm-email" class="form-control validate mt-1" value="${jobseekerimplgtid.jobseaddress.country}" name="country">
-                   
-                </div>
-
-                <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">District </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobseekerimplgtid.jobseaddress.district}" name="district">
-                  
-                </div>
-                <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">City </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobseekerimplgtid.jobseaddress.city}" name="city">
-
-
-                  
-                </div>
-                  <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">Streetaddress </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobseekerimplgtid.jobseaddress.staddress}" name="staddress">
-                  
-                </div>
-                <%-- </c:forEach> --%>
-
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-default" type="submit">Update</button>
-            </div>
-            </form>
-        </div>
-    </div>
-</div>
 
 
 
 
 
 
-<!-- ---------------------------indaddress model------------------------- -->
-<!-- ---------------------------personal information model------------------------- -->
 
-<div class="modal fade" id="modalLoginFormjobposinfor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-     
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Indiviudal Information </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        <form role="form" action="updatejobseekeerifo" method="POST">
-            <div class="modal-body mx-3">
-                <div class="md-form">
-                    <i class="fa fa-envelope prefix grey-text"></i>
-                     <label data-error="wrong" data-success="right" for="defaultForm-email"> <small class="indigo-text">Firstname </small></label> <br>
-                    <input type="text" id="defaultForm-email" class="form-control validate mt-1" value="${jobseekerimplgtid.firstname}" name="firstname">
-                   
-                </div>
-
-                <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">LastName </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobseekerimplgtid.lastname}" name="lastname">
-                  
-                </div>
-                <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">email </small></label> <br>
-                    <input type="email" id="defaultForm-pass" class="form-control validate mt-1" value="${jobseekerimplgtid.email}" name="email">
-
-
-                  
-                </div>
-                  <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">D.O.B </small></label> <br>
-                    <input type="date" id="defaultForm-pass" class="form-control validate mt-1" value="${jobseekerimplgtid.dob}" name="dob">
-                  
-                </div>
-            
-              <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                      <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">Contact No </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobseekerimplgtid.contactno}" name="contactno">
-                                      <input type="hidden" id="defaultForm-pass" class="form-control validate mt-1" value="${jobseekerimplgtid.primage}" name="primage">
-<%--             <input type="hidden" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.jobpostaddress.id}" name="jobpostaddress.id"> --%>
-                        <%--  <input type="hidden" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.jobpostersecurity.id}" name="jbpostadr_id"> --%>
-                  
-                </div>
-
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-default" type="submit">Update</button>
-            </div>
-          </form> 
-        </div>
-    </div>
-</div>
-
-<!-- -------------------for  the jobpostersecurity-------------- -->
-
-    <div class="row">
-     
-  
-     <div class="col-md-12 mt-5">
-       <div class="card" id="indhiddd">
-<!--     <h5 class="card-header primary-color white-text"><Strong>Individual Address </strong></h5> -->
-    <h4>  <a href="#!" class="badge badge-white ml-5 pb-2 pt-2 pl-4 pr-5 mt-3 border"> <small class="green-text">Address Setting </small></a>  </h4>
-
-    <div class="card-body">
-<%-- <c:forEach var="jobpostaddress" items="jobposteraddressad">  --%>
-  
-    <div class="mt-2 mb-2">
-  <h6> <small>Country</small> </h6>
-  <h6 class="deep-purple-text">${jobseekerimplgtid.jobseaddress.country}</h6>
-</div>
-
-<div class="mt-3 mb-3">
-  <h6> <small>District</small> </h6>
-  <h6 class="deep-purple-text">${jobseekerimplgtid.jobseaddress.district} </h6>
-</div>
-
-     <div class="mt-2 mb-2">
-  <h6> <small>City</small> </h6>
-  <h6 class="deep-purple-text">${jobseekerimplgtid.jobseaddress.city} </h6>
-</div>
-
-<div class="mt-3 mb-3">
-  <h6> <small>Street-Address</small> </h6>
-  <h6 class="deep-purple-text">${jobseekerimplgtid.jobseaddress.staddress} </h6>
-</div>
-
-<%--    </c:forEach>  --%>     
-      
-<button class="btn btn-success btn-rounded float-right hiddvindaddbtn" type="submit" id="btnindiaddid" data-toggle="modal" data-target="#modalLoginFormaddind">Update</button>
-<!-- <button class="btn btn-success btn-rounded float-right hiddvindaddbtn" type="submit" id="btnindiaddid">Cancel</button> -->
-    </div>
-</div>
-    </div>
- 
-      </div>
-        <div class="col-md-12 mt-5">
-       <div class="card" id="indhidddskills">
-<!--     <h5 class="card-header primary-color white-text"><Strong>Educational & Skills Info </strong></h5> -->
-    <h4>  <a href="#!" class="badge badge-white ml-4 pb-2 pt-2 pl-4 pr-3 mt-3 border"> <small class="green-text">Education Status </small></a>  </h4>
-
-    <div class="card-body">
-<%-- <c:forEach var="jobpostaddress" items="jobposteraddressad">  --%>
-  
-    <div class="mt-2 mb-2">
-  <h6> <small>Education Status</small> </h6>
-  <h6 class="deep-purple-text">${jobseekerimplgtid.jobSeeSkills.educationLevel} </h6>
-  <h6><%-- ${jobseekerimplgtid.JobSeeSkills.educationlevel} --%></h6>
-</div>
-
-<div class="mt-3 mb-3">
-  <h6> <small>Skills</small> </h6>
-  <h6><%-- ${jobseekerimplgtid.JobSeeSkills.skills} --%> </h6>
-  <h6 class="deep-purple-text">${jobseekerimplgtid.jobSeeSkills.skills} </h6>
-</div>
-
-
-<%--    </c:forEach>  --%>     
-      
-<!-- <button class="btn btn-success btn-rounded float-right" type="submit" id="btnindiaddid" data-toggle="modal" data-target="#modalLoginFormaddind">Update</button>
- --><!-- <button class="btn btn-success btn-rounded float-right hiddvindaddbtn" type="submit" id="btnindiaddid">Cancel</button> -->
-    
-    <button class="btn btn-primary float-right hiddvindskillssk" id="forskilsbtnz" data-toggle="modal" data-target="#modalupdatejobseekerskills">Update</button>
-    </div>
-</div>
-    </div>
- 
-      </div>
-    </div>
-    
     
     
   </div>
@@ -1045,7 +756,7 @@ data-backdrop="false">
         <div class="col-md-7 col-lg-8">
 
           <!--Copyright-->
-          <p class="text-center text-md-left">© 2018 Copyright:
+          <p class="text-center text-md-left">ï¿½ 2018 Copyright:
             <a href="https://mdbootstrap.com/bootstrap-tutorial/">
               <strong> RuAin.Find Relevvant's jobs</strong>
             </a>
@@ -1091,7 +802,7 @@ data-backdrop="false">
 
     </div>
     <!-- Footer Links -->
-
+    <script src="js/scripts.js"></script>
   </footer>
   <!-- Footer -->
 

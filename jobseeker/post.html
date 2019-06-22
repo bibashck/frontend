@@ -8,14 +8,14 @@
   RuAin</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
  <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
    <!-- Custom styles for this template -->
     <!-- <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet"> -->
  <link rel="icon" href="../Pics/ru1.jpg" type="image/jpg" sizes="32x32"> 
-
+<!--  <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -198,12 +198,14 @@ $(function () {
 <!-- this is for the search -->
         <ul class="navbar-nav ml-auto">
 
-         
-          <!-- <li class="nav-item">
-            <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>Post Jobs</Strong> </h6> </a>
-          </li> -->
           <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong> job post </Strong></h6></a>
+            <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>Post Jobs</Strong> </h6> </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong>Manage job post </Strong></h6></a>
             </li>
            <li class="nav-item">
             <a class="nav-link text-dark js-scroll-trigger" href="jobslistJobSeekeerindappliedjobs.html"><h6><Strong>Manage Jobs </Strong></h6></a>
@@ -211,9 +213,7 @@ $(function () {
           <li class="nav-item">
             <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/getpostjobsportal"><h6><Strong>Others </Strong></h6></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
-          </li>
+         
            
            <!-- Dropdown -->
           <li class="nav-item dropdown ml-3">
@@ -255,11 +255,11 @@ $(function () {
 <!--     <h5 class="card-header black-text pt-4 pb-4"><Strong>&emsp;My Job Lists </strong> <i class="fa fa-ellipsis-h fa-1x float-right text-success" aria-hidden="true"></i></h5>
  -->
           <div class="card col-sm-12 pb-2">
+         
+          <div class="input-group mt-2" data-toggle="tooltip" data-placement="bottom" title="post somethings">
           
-          <div class="input-group mt-2" data-toggle="tooltip" data-placement="bottom" title="Search Jobs">
-          
-            <button id="add-jobs" submit-post class="button__trigger" type="submit" data-toggle="modal" data-target="#modalLRForm" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a job post?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-   
+            <button id="add-job" submit-post class="button__trigger" type="submit" data-toggle="modal" data-target="#modalLRForm" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;what's on your mind?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+    </div>
 
 
 </div>
@@ -274,14 +274,16 @@ $(function () {
 	
 
 
-    <div class="container">
-     
-      <table class="table col-sm-12">
-        
-        <tbody id="tblbody"></tbody>
-      </table>
+<div class="container">
 
-      <hr />
+
+<table class="table col-sm-12">
+  <thead>
+   
+  </thead>
+  <div class="card-body"><tbody id="tblbody"><hr></tbody></table></div>
+</table>
+
    
 
 
@@ -335,72 +337,26 @@ $(function () {
                       <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
   
                           <!--Body-->
-            <form ></form><div class="md-form col-md-8">
-               
-                <label for="inputIconEx1"><small> &emsp; JobName (required) </small></label>  <br>
-               <!-- <i class="fa fa-street-view prefix" aria-hidden="true"></i>  -->
-                <input type="text" id="name" class="form-control" required="required" name="jobname" >
-                
-            </div>
-            <div class="md-form col-md-8">
-               
-                 <label for="inputIconEx1"><small> &emsp; JobType (required) </small></label>  <br>
-                 <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
-                 
-                 <select id="JobType" class="mt-3">
-                  <option value="Aviation:">Aviation</option>
-                  <option value="Arts">Arts</option>
-                  <option value="Law Enforcement">Law Enforcement</option>
-                  <option value="Media">Media</option>
-                  <option value="Aviation:">Aviation</option>
-                  <option value="Arts">Arts</option>
-                  <option value="Medical:">Medical</option>
-                  <option value="Service Industry">Service Industry</option>
-                  <option value="Teaching">Teaching</option>
-                  <option value="Technology:">Technology</option>
-                </select>
-                 
-             </div>
-             <div class="md-form col-md-8">
-                  
-                    <label for="inputIconEx1"><small> &emsp; Number of Applicant (required) </small></label>  <br>
-                    <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
-                    <input type="number" id="Applicant" class="form-control" required="required" name="numberofapplicant">
-                    
-                </div>
-                <div class="md-form col-md-10">
-
-                        
-                   <label for="inputIconEx1"><small class="text-monospace">&emsp; Salary </small></label>  <br>
-                   <input type="number" id="Salary" class="form-control" required="required" name="salary">
-               
+            <form role="form"  >
+                <div class="md-form">
                    
-               </div>
-               <div class="md-form col-md-10">
-                    <!-- <i class="" aria-hidden="true"></i> -->
-
-<label for="inputIconEx1"><small> &emsp; Deadline (required)</small></label>  <br>
-<!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
-<input type="date" id="Deadline" class="form-control" required="required" name="deadline">
-
-</div>
-
-               <div class="md-form">
-                  
                         <label for="textareaPrefix">Job Description <small> ( Min 120 words required)</small></label> <br>
                     <textarea type="text" id="description" class="form-control md-textarea" rows="8" minlength="120" required="required" name="jobdescription"></textarea>
                 
                 </div>
-                <form enctype="multipart/form-data" id="fileUploadForm">
-                        
-                       
-                  <input class="fa fa-camera upload-button" type="file"  id="file-To-Upload" required />
-                </form><br>
-                <button type="button"  id="add-job" class="btn btn-danger view" data-toggle="modal" data-target="#modalLRForm" post_id=' + hero._id + '>Submit</button>
+                               
+                       <div class="text-center">
+  <button id="submit-post" type="submit" class="btn btn-outline-primary btn-rounded waves-effect" id="login-btn">Login</button>
+  </div>
   
   </form>
                           <!--Footer-->
                          
+  <!--                                
+   -->                              
+                              </div>
+                              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                          </div>
   
                       </div>
                       <!--/.Panel 7-->
@@ -556,6 +512,6 @@ $(function () {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
   crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
+  <script src="js/scriptlog.js"></script>
 </body>
 </html>

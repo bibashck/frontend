@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    let base_url = 'http://localhost:3000/';
     $.ajaxSetup({
  xhrFields:{
      withCredentials: true
@@ -90,4 +90,53 @@ $("#Register-btn").on('click', function (e) {
         }
     });
 });
+
+$("#submit-post").on('click', function (e) {
+
+    e.preventDefault();
+ 
+    console.log("hello");
+ 
+     let user = {
+        description: $("#description").val(),
+         
+         
+     };
+     console.log(user);
+     $.ajax({
+         type: 'POST',
+         url: 'http://localhost:3000/post',
+         data: user,
+ 
+         success: function (user) {
+             alert("Sucessfully added");
+             window.location.href = '/post.html';    
+         },
+         error: function () {
+             alert("write clearly");
+         }
+     });
+ });
+ function rowTemplates(hero) {
+    let oneRow =  hero.description ;
+   
+    
+    return oneRow;
+}
+
+$.ajax({
+    type: 'GET',
+    url: base_url + 'post',
+    success: function (heroes) {
+        let myRows = [];
+        $.each(heroes, function (index, hero) {
+            myRows.push(rowTemplates(hero));
+        });
+        tblbody.append(myRows);
+    },
+    error: function () {
+        alert('Something went wrong!');
+    }
+});
+
 });
