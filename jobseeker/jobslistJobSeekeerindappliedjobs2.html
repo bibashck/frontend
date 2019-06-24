@@ -255,7 +255,7 @@ $(document).ready(function(){
         <!-- <tbody id="tblbody"></tbody> -->
       </table>
     </div>
-  </div>
+  </div>.
 </div> -->
 <div class="container">
     <div class="row header" style="text-align:center;color:green">
@@ -264,17 +264,13 @@ $(document).ready(function(){
     <table id="myTable" class="table table-striped" >  
             <thead>  
               <tr>  
-                <th>Job name</th>  
-                <th>Type</th>  
-                <th>Applicant</th>  
-                <th>Deadline</th> 
-                <th>Salary</th>
-                <th>Description</th> 
-                <th>Remove</th>
+                <th>Post details</th>  
+                <th>Remove</th>    
+                <th>Edit</th>
               </tr>  
             </thead>  
             <tbody>
-                <tbody id="tblbody"></tbody>
+                <tbody id="userpost"></tbody>
               </tbody>
           </table>  
         </div>
@@ -286,6 +282,53 @@ $(document).ready(function(){
       .col-6 .col-md-4 dfgdffddffdfdfdgdfgdfgdfgdf
       .col-6 .col-md-4 dfgdffddffdfdfdgdfgdfgdfgdf.col-6  -->
     </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+      <!--Content-->
+      <div class="modal-content">
+
+          <!--Modal cascading tabs-->
+          <div class="modal-c-tabs">
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+                  <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Update</a>
+                  </li>
+           
+              </ul>
+
+              <!-- Tab panels -->
+              <div class="tab-content">
+                  <!--Panel 7-->
+                  <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                      <!--Body-->
+     
+           <div id="tblbodys"  class="md-form">
+              
+                    <!-- <label for="textareaPrefix">Job Description <small> ( Min 120 words required)</small></label> <br>
+                <textarea type="text" id="description" class="form-control md-textarea" rows="8" minlength="120" required="required" name="jobdescription">hello</textarea>
+             -->
+
+            </div>
+            
+</form>
+                      <!--Footer-->
+                     
+
+                  </div>
+                  <!--/.Panel 7-->
+
+                
+              </div>
+
+          </div>
+      </div>
+      <!--/.Content-->
   </div>
 </div>
 
@@ -430,6 +473,6 @@ $(document).ready(function(){
       });
       </script>
   <!-- Footer -->
-  <script src="js/script.js"></script>
+  <script src="js/post.js"></script>
 </body>
 </html>
