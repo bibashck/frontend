@@ -8,14 +8,14 @@
   RuAin</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
  <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
    <!-- Custom styles for this template -->
     <!-- <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet"> -->
  <link rel="icon" href="../Pics/ru1.jpg" type="image/jpg" sizes="32x32"> 
-<!--  <!-- Bootstrap core CSS -->
+
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -198,14 +198,12 @@ $(function () {
 <!-- this is for the search -->
         <ul class="navbar-nav ml-auto">
 
-          <li class="nav-item">
-            <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
-          </li>
-          <li class="nav-item">
+         
+          <!-- <li class="nav-item">
             <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>Post Jobs</Strong> </h6> </a>
-          </li>
+          </li> -->
           <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong>Manage job post </Strong></h6></a>
+              <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong> job post </Strong></h6></a>
             </li>
            <li class="nav-item">
             <a class="nav-link text-dark js-scroll-trigger" href="jobslistJobSeekeerindappliedjobs.html"><h6><Strong>Manage Jobs </Strong></h6></a>
@@ -213,7 +211,9 @@ $(function () {
           <li class="nav-item">
             <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/getpostjobsportal"><h6><Strong>Others </Strong></h6></a>
           </li>
-         
+          <li class="nav-item">
+            <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
+          </li>
            
            <!-- Dropdown -->
           <li class="nav-item dropdown ml-3">
@@ -255,11 +255,11 @@ $(function () {
 <!--     <h5 class="card-header black-text pt-4 pb-4"><Strong>&emsp;My Job Lists </strong> <i class="fa fa-ellipsis-h fa-1x float-right text-success" aria-hidden="true"></i></h5>
  -->
           <div class="card col-sm-12 pb-2">
-         
-          <div class="input-group mt-2" data-toggle="tooltip" data-placement="bottom" title="post somethings">
           
-            <button id="add-job" submit-post class="button__trigger" type="submit" data-toggle="modal" data-target="#modalLRForm" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;what's on your mind?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-    </div>
+          <div class="input-group mt-2" data-toggle="tooltip" data-placement="bottom" title="Search Jobs">
+          
+            <button id="add-jobs" submit-post class="button__trigger" type="submit" data-toggle="modal" data-target="#modalLRForm" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a job post?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+   
 
 
 </div>
@@ -273,35 +273,32 @@ $(function () {
 <!-- item is used to hold data -->
 	
 
-
 <div class="container">
 
 
-<table class="table col-sm-12">
-  <thead>
-   
-  </thead>
-  <div class="card-body"><tbody id="tblbody"><hr></tbody></table></div>
-</table>
-
-   
-
-
-    <!-- Button -->
-    <!-- <a href="#" class="btn btn-primary">Button</a> -->
-
-  </div>
-  <!-- <hr> -->
-  <hr>
- 
-</div>
-</c:forEach> 
-<!-- Card -->
-
-       
-
+  
+    <Div id="tblbody"><hr></div>
+  
+  
+     
+  
+  
+      <!-- Button -->
+      <!-- <a href="#" class="btn btn-primary">Button</a> -->
+  
     </div>
-</div>
+    <!-- <hr> -->
+    <hr>
+   
+  </div>
+  </c:forEach> 
+  <!-- Card -->
+  
+         
+  
+      </div>
+  </div>
+  
 
    
 	
@@ -316,59 +313,60 @@ $(function () {
 </div>
   <!--Modal: Login / Register Form-->
   <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog cascading-modal" role="document">
-          <!--Content-->
-          <div class="modal-content">
-  
-              <!--Modal cascading tabs-->
-              <div class="modal-c-tabs">
-  
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
-                      <li class="nav-item">
-                          <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Update</a>
-                      </li>
-               
-                  </ul>
-  
-                  <!-- Tab panels -->
-                  <div class="tab-content">
-                      <!--Panel 7-->
-                      <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-  
-                          <!--Body-->
-            <form role="form"  >
-                <div class="md-form">
-                   
-                        <label for="textareaPrefix">Job Description <small> ( Min 120 words required)</small></label> <br>
-                    <textarea type="text" id="description" class="form-control md-textarea" rows="8" minlength="120" required="required" name="jobdescription"></textarea>
-                
-                </div>
-                               
-                       <div class="text-center">
-  <button id="submit-post" type="submit" class="btn btn-outline-primary btn-rounded waves-effect" id="login-btn">Login</button>
-  </div>
-  
-  </form>
-                          <!--Footer-->
-                         
-  <!--                                
-   -->                              
-                              </div>
-                              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
-                          </div>
-  
-                      </div>
-                      <!--/.Panel 7-->
-  
-                    
-                  </div>
-  
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Update</a>
+                    </li>
+             
+                </ul>
+
+                <!-- Tab panels -->
+                <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                        <!--Body-->
+          <form role="form"  >
+              <div class="md-form">
+                 
+                      <label for="textareaPrefix">Job Description <small> ( Min 120 words required)</small></label> <br>
+                  <textarea type="text" id="description" class="form-control md-textarea" rows="8" minlength="120" required name="jobdescription"></textarea>
+              
               </div>
-          </div>
-          <!--/.Content-->
-      </div>
-  </div>
+                             
+                     <div class="text-center">
+<button id="submit-post" type="submit" class="btn btn-outline-primary btn-rounded waves-effect" id="login-btn">Submit</button>
+</div>
+
+</form>
+                        <!--Footer-->
+                       
+<!--                                
+ -->                              
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                    <!--/.Panel 7-->
+
+                  
+                </div>
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
 
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color pt-4">
@@ -504,14 +502,7 @@ $(function () {
 
   </footer>
   <!-- Footer -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-  crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-  crossorigin="anonymous"></script>
+ 
   <script src="js/scriptlog.js"></script>
 </body>
 </html>

@@ -124,7 +124,9 @@ $("#submit-post").on('click', function (e) {
      });
  });
  function rowTemplates(hero) {
-    let oneRow =  hero.description ;
+    let oneRow = '<div class="card-body">'+hero.description  
+    +'</div><hr>';
+  
    
     
     return oneRow;

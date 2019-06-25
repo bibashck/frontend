@@ -214,7 +214,7 @@ $("#update-job").on('click','.view', function (e) {
      });
     
      function rowTemplate(hero) {
-        let oneRow = '<div class="card-body">'+ '<img src= ' + base_url + "uploads/" + hero.image  +'&nbsp;'+ "width=50px>"+ ' <h6 class="card-title">Job name:&nbsp;'+hero.name + 
+        let oneRow = '<div class="card-body">'+ '<img src= ' + base_url + "uploads/" + hero.image  + "width=50px>"+ ' <h6 class="card-title">Job name:&nbsp;'+hero.name + 
         '</h6>' + '<p><small class="ml-1">job type:&nbsp; '+hero.JobType + '</p>'+'<b>Preference Skills: </b>'+hero.Description+'<br><br><b>Total Applicant: </b>'+hero.Applicant+'<p class="card-text mt-3"><b>Deadline: </b>'+hero.Deadline +'<br><b>Salary: </b>'+hero.Salary+'</div><hr>';
       
         return oneRow;

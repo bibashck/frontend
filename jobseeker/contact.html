@@ -126,7 +126,43 @@
 
 </div>
 <hr>
+<!-- Default form contact -->
+<form class="text-center border border-light p-5">
 
+  <p class="h4 mb-4">Contact us</p>
+
+  <!-- Name -->
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+
+  <!-- Email -->
+  <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Subject -->
+  <label>Subject</label>
+  <select class="browser-default custom-select mb-4">
+      <option value="" disabled>Choose option</option>
+      <option value="1" selected>Feedback</option>
+      <option value="2">Report a bug</option>
+      <option value="3">Feature request</option>
+      <option value="4">Feature request</option>
+  </select>
+
+  <!-- Message -->
+  <div class="form-group">
+      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+  </div>
+
+  <!-- Copy -->
+  <div class="custom-control custom-checkbox mb-4">
+      <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+      <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+  </div>
+
+  <!-- Send button -->
+  <button class="btn btn-info btn-block" type="submit">Send</button>
+
+</form>
+<!-- Default form contact -->
 
 <div class="modal fade" id="modalloginformvv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -165,549 +201,17 @@
 </div>
 
 
+<!--Section: Contact v.2-->
 
-<div class="jumbotron stylish-color-dark">
-   <div class="container text-center text-white">
-        <div class="row">
-          <div class="col-sm-6 ">
-             <h2>Best Platform to Find Relevant Jobs</h2>
-        <p class="lead">Find Jobs, apply Jobs, find Oppurtunity, <br>
-          From Client to customer  and No commison is undertaken.
-        </p>
-         <div class="col-sm-12">
-          <!-- <input type="text" class="form-control form-control-lg placeholder="What do you want ?"> -->
-          <div class = "input-group">
-               <input type = "text" class = "form-control form-control-sm">
-               
-               <span class = "input-group-btn">
-                  <button class = "btn btn-info btn-lg ml-2 " type = "button">
-                    <h6> Get Started ! </h6>
-                  </button>
-               </span>
-               
-            </div><!-- /input-group -->
-        </div>
-      </div>
-      <div class="col-sm-6">
-      	<div class="container">
-      		<!-- <Strong ><h2> Nepal No.1 Job Search Platform. </h2></Strong> -->
-      		<h1 class="ml1">
-  <span class="text-wrapper">
-    <span class="line line1"></span>
-    <span class="letters"><strong>Nepal No.1 Job Search Engine </strong></span>
-    <span class="line line2"></span>
-  </span>
-</h1>
-<!-- text eddect ko lagi -->
- <style>
-.ml1 {
-  font-weight: 900;
-  font-size: 3em;
-  color: white;
-}
+              <!--Grid row-->
 
-.ml1 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
+         
+      <!--Grid column-->
 
-.ml1 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.1em;
-  padding-right: 0.05em;
-  padding-bottom: 0.15em;
-}
+   
 
-.ml1 .line {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
-  transform-origin: 0 0;
-}
-
-.ml1 .line1 { top: 0; }
-.ml1 .line2 { bottom: 0; }
-</style>
-<script type="text/javascript">
-	
-
-	// Wrap every letter in a span
-$('.ml1 .letters').each(function(){
-  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-});
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml1 .letter',
-    scale: [0.3,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: function(el, i) {
-      return 70 * (i+1)
-    }
-  }).add({
-    targets: '.ml1 .line',
-    scaleX: [0,1],
-    opacity: [0.5,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    offset: '-=875',
-    delay: function(el, i, l) {
-      return 80 * (l - i);
-    }
-  }).add({
-    targets: '.ml1',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-</script>
-
-
-      	</div>
-      </div>
-      </div>         
-  </div>
- </div>
-  <div class="container-fluid bg-dark">
-
-</div>
-<hr>
-
-
-<!-- yo ta tyoy hire wala -->
-<style>
-#testdiv {
-   border-left: 3px solid;
-  /* border-color: green;*/
-  
-}
-</style>
-<div class="container ml-auto" style="height:auto">
-<div class="row ml-4">
-
-  <div class="col-sm-3 text-center">
-<h4 class="text-left"> <strong>Hire for any scope </strong></h4>
-  </div><div class="col-sm-3 text-center" id="testdiv">
-<h5> <b><strong>Short-term tasks  </strong></b></h5>
-Build a pool of diverse <br>experts  for one-off tasks
-  </div>
-  <div class="col-sm-3 text-center" id="testdiv">
-  	<h5> <b><strong>Recurring projects </strong></b></h5>
-Have a go-to team with the specialized skills individual.
-
-
-  </div>
-  <div class="col-sm-3 text-center" id="testdiv">
-  	  	<h5> <b><strong>Full-time contract work</strong></b></h5>
-Expand your staff with a dedicated team and the support properly.
- 
-  </div>
-</div>
-
-</div>
-<!-- yo chai kk   garna milxa ra k ko lagi  ho -->
-<div class="container mt-5" id="trndjbs">
-  <!-- <h3 class="text-center"> Some of our most in-demand pros</h3> -->
-   <h2 class="text-center pl-4"><B>Some of our most in-demand pros </B></h2> <hr>
-  <div class="row mt-5 rgba-white-strong">
-    <div class="col-sm-3 ml-auto">
-
-   <!-- Card -->
-<div class="card">
-
-  <!-- Card image -->
-  <div class="view overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
- 
-        <img src="${pageContext.request.contextPath}/resources/Pics/programmer.png" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
-    
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h5 class="card-title text-center">Programmer</h5>
-    <hr>
-
-
-  </div>
-
-
-</div>
-<!-- Card -->
-
-
-    </div>
-     <div class="col-sm-3">
-
-
-
-   <!-- Card -->
-<div class="card">
-
-  <!-- Card image -->
-  <div class="view overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
- 
-        <img src="${pageContext.request.contextPath}/resources/Pics/ui2.png" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
-    
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h5 class="card-title text-center">UI Designer</h5>
-    <hr>
-
-
-  </div>
-
-
-</div>
-<!-- Card -->
-
-
-
-    </div>
-     <div class="col-sm-3 ml-auto">
-
-   <!-- Card -->
-<div class="card">
-
-  <!-- Card image -->
-  <div class="view overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
- 
-        <img src="${pageContext.request.contextPath}/resources/Pics/contentwriter2.jpg" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
-    
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h5 class="card-title text-center">Content Writer</h5>
-    <hr>
-
-
-  </div>
-
-
-</div>
-<!-- Card -->
-
-    </div>
-     <div class="col-sm-3 ml-auto">
- <!-- Card -->
-<div class="card">
-
-  <!-- Card image -->
-  <div class="view overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
- 
-        <img src="${pageContext.request.contextPath}/resources/Pics/anala.png" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
-    
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h5 class="card-title text-center">Analyst</h5>
-    <hr>
-
-
-  </div>
-
-
-</div>
-<!-- Card -->
-
-    </div>
-     <div class="col-sm-3 mt-3">
-<!-- Card -->
-<div class="card">
-
-  <!-- Card image -->
-  <div class="view overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
- 
-        <img src="${pageContext.request.contextPath}/resources/Pics/projectmanager.png" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
-    
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h5 class="card-title text-center">Project Manager</h5>
-    <hr>
-
-
-  </div>
-
-
-</div>
-<!-- Card -->
-
-    </div>
-      <div class="col-sm-3 mt-3">
-<!-- Card -->
-<div class="card">
-
-  <!-- Card image -->
-  <div class="view overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
- 
-        <img src="${pageContext.request.contextPath}/resources/Pics/adminst.png" alt="adminstrator" class="mx-auto d-block d-block" style="max-height:100px">
-    
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h5 class="card-title text-center">Administrator</h5>
-    <hr>
-
-
-  </div>
-
-
-</div>
-<!-- Card -->
-
-    </div>
-    
-    <div class="col-sm-3 mt-3">
-<!-- Card -->
-<div class="card">
-
-  <!-- Card image -->
-  <div class="view overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
- 
-        <img src="${pageContext.request.contextPath}/resources/Pics/tech.png" alt="Technician" class="mx-auto d-block d-block" style="max-height:100px">
-    
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h5 class="card-title text-center">Technician</h5>
-    <hr>
-
-
-  </div>
-
-
-</div>
-<!-- Card -->
-
-    </div>
-
-
-  
-    <div class="col-sm-3 mt-3">
-<!-- Card -->
-<div class="card">
-
-  <!-- Card image -->
-  <div class="view overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
- 
-        <img src="${pageContext.request.contextPath}/resources/Pics/mark2.png" alt="Mark & advert" class="mx-auto d-block d-block" style="max-height:100px">
-    
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h5 class="card-title text-center">Marketing & Advertising</h5>
-    <hr>
-
-
-  </div>
-
-
-</div>
-<!-- Card -->
-
-    </div>
-  </div>
-
-  </div>
-<!-- yo how  it works ko lagi ho -->
-
-<div class="jumbotron mt-4">
-
-
- <div class="container" id="howitwrks">
- <h1 class="text-center pl-auto display-5"><B>How it works </B></h1>
- <div class="row mt-5">
-
-  <div class="col-sm-3">
- 
-  <!--Card Regular-->
-        <div class="card card-cascade">
-
-            <!--Card image-->
-            <div class="view view-cascade overlay">
-    
-                        <img src="${pageContext.request.contextPath}/resources/Pics/findsv.svg" alt="Find" class="mx-auto d-block d-block" style="max-height:120px">
-                <a>
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-            <!--/.Card image-->
-            <!--Card content-->
-            <div class="card-body card-body-cascade text-center">
-                <!--Title-->
-                <h4 class="card-title"><strong>Search</strong></h4>
-                <!-- <h5>Web developer</h5> -->
-                <p class="card-text">Search job according to your skills.
-                </p>
-            </div>
-            <!--/.Card content-->
-
-        </div>
-        <!--/.Card Regular-->
-
-</div>
-  <div class="col-sm-3 text-center">
-<!--Card Regular-->
-        <div class="card card-cascade">
-
-            <!--Card image-->
-            <div class="view view-cascade overlay">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Others/men.jpg" class="card-img-top" alt="normal"> -->
-                <!-- <img src="../Pics/findsv.svg" alt="Find" class="card-img-center"> -->
-                  <img src="${pageContext.request.contextPath}/resources/Pics/findsv.svg" alt="Find" class="mx-auto d-block d-block" style="max-height:120px">
-
-                <a>
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-            <!--/.Card image-->
-
-            <!--Card content-->
-            <div class="card-body card-body-cascade text-center">
-                <!--Title-->
-                <h4 class="card-title"><strong>Post Jobs</strong></h4>
-                <!-- <h5>Web developer</h5> -->
-
-                <p class="card-text">Post Job by your Requirnnement
-                	& &nbsp; get the best outcomes .
-                </p>
-
-
-            </div>
-            <!--/.Card content-->
-
-        </div>
-        <!--/.Card Regular-->
-  </div>
-  <div class="col-sm-3">
-<!--Card Regular-->
-        <div class="card card-cascade">
-
-            <!--Card image-->
-            <div class="view view-cascade overlay">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Others/men.jpg" class="card-img-top" alt="normal"> -->
-              
-                  <img src="${pageContext.request.contextPath}/resources/Pics/hire.svg" alt="Find" class="mx-auto d-block d-block" style="max-height:120px">
-                <a>
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-            <!--/.Card image-->
-
-            <!--Card content-->
-            <div class="card-body card-body-cascade text-center">
-                <!--Title-->
-                <h4 class="card-title"><strong>Apply</strong></h4>
-                <!-- <h5>Web developer</h5> -->
-
-                <p class="card-text">Use the RuAin platform to find <br>
-the suitable jobs and apply for  it.
-                </p>
-
-
-            </div>
-            <!--/.Card content-->
-
-        </div>
-        <!--/.Card Regular-->
-  </div>
-  <div class="col-sm-3"> 
-   <!--Card Regular-->
-        <div class="card card-cascade">
-
-            <!--Card image-->
-            <div class="view view-cascade overlay">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Others/men.jpg" class="card-img-top" alt="normal"> -->
-                <img src="${pageContext.request.contextPath}/resources/Pics/feed.svg" alt="Find" class="mx-auto d-block d-block" style="max-height:120px">
-                <a>
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-            <!--/.Card image-->
-
-            <!--Card content-->
-            <div class="card-body card-body-cascade text-center">
-                <!--Title-->
-                <h4 class="card-title"><strong>Feedback</strong></h4>
-                <!-- <h5>Web developer</h5> -->
-
-                <p class="card-text">Give the Feedback and experience views of the jobs
-                </p>
-
-
-            </div>
-            <!--/.Card content-->
-
-        </div>
-        <!--/.Card Regular-->
-  </div>
- </div>
-</div>
-</div>
+</section>
+<!--Section: Contact v.2-->
 
 <!-- this is  for the  footer -->
 
