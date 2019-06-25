@@ -378,7 +378,7 @@ $(window).on('load', function () {
  
    <div class="form-inline">
 
-     <div class="avatar mx-3 white"><img src="http://localhost:3000/uploads/cc.png" class="rounded-circle profi border border-primary"> 
+     <div class="avatar mx-3 white"><img src="" class="rounded-circle profi border border-primary"> 
 
 </div>
       
@@ -394,7 +394,7 @@ $(window).on('load', function () {
    <div class="small-8 medium-2 large-2 columns mb-3">
      <div class="circle">
        <!-- User Profile Image -->
-       <img class="profile-pic" src="">
+       <img class="profile-pic" id="user_image">
 
   <!-- <i class="fa fa-camera upload-button"></i> -->
        <!-- Default Image -->
@@ -539,12 +539,9 @@ $(window).on('load', function () {
         <!-- <h6 class="card-title">Username</h6> -->
   <div class="mt-2 mb-2">
   <h6> <small>Username</small> </h6>
-  <h6 class="deep-purple-text">bibashck </h6>
+  <h6 class="deep-purple-text"><strong id="Uname"></strong> </h6>
 </div>
-<div class="mt-3 mb-3">
-  <h6> <small>Password</small> </h6>
-  <h6 class="deep-purple-text"> bibashck </h6>
-</div>
+
             <button class="btn btn-success btn-rounded float-right hiddvindprf " type="submit" id="profilbtnz" data-toggle="modal" data-target="#modalLoginForm">Update</button>
 
 
@@ -629,7 +626,7 @@ $(window).on('load', function () {
                 <div class="md-form">
                     <i class="fa fa-envelope prefix grey-text"></i>
                      <label data-error="wrong" data-success="right" for="defaultForm-email"> <small class="indigo-text">Country </small></label> <br>
-                    <input type="text" id="defaultForm-email" class="form-control validate mt-1" value="Nepal" name="country">
+                    <input type="text" id="country" class="form-control validate mt-1"  name="country">
                    
                 </div>
 
@@ -761,7 +758,7 @@ $(window).on('load', function () {
           </p>
         
         </div>
-<form action="getupdatejobpostjobposterprofilephoto" method="POST" enctype="multipart/form-data">
+<form  enctype="multipart/form-data">
       
     
 
@@ -769,12 +766,12 @@ $(window).on('load', function () {
                     <!-- <i class="fa fa-envelope prefix grey-text"></i> -->
                     <label data-error="wrong" data-success="right" for="form2">Upload Image</label><br> <br>
 
-                    <input type="file" name="file[]">
+                    <input id="imageupload" type="file" name="file[]">
                   
                     
                 </div>
                  <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-indigo" type="submit">Upload Image <i class="fa fa-paper-plane-o ml-1"></i></button>
+                <button id="uploadimage" class="btn btn-indigo" type="submit">Upload Image <i class="fa fa-paper-plane-o ml-1"></i></button>
             </div>
           </form>
 

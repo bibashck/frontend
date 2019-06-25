@@ -32,6 +32,10 @@ $(function () {
             $( "#number" ).append(user.contactnumber );
             $( "#email" ).append(user.email );
             $( "#address" ).append(user.Address );
+            $( "#image" ).append(user.image );
+            $( "#Uname" ).append(user.username );
+            $( "#country" ).append(user.Country );
+            $('#user_image').append('img src="http://localhost:3000/uploads/'+user.image + '" ');
             address
 
  
@@ -41,8 +45,57 @@ $(function () {
         }
     });
 
+    $("#imageupload").on('change', function () {
+        let formData = new FormData();
+        let files = $("#imageupload").get(0).files;
+        if (files.length > 0) {
+            formData.append("imageFile", files[0]);
+        }
+        // $("#add-hero").prop("disabled", true);
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/uploads',
+            contentType: false,
+            cache: false,
+            processData: false,
+            data: formData,
+            success: function (data) {
+                imageFile = data.filename;
+                // $("#add-hero").prop("disabled", false);
+            },
+            error: function () {
+                alert("Image upload failed!");
+            }
+        });
+    });
 
 
+    $("#uploadimage").on('click', function (e) {
+
+        e.preventDefault();
+     
+        console.log("hello");
+     
+         let user = {
+            
+            
+            image: imageFile
+         };
+         console.log(user);
+         $.ajax({
+             type: 'PUT',
+             url: 'http://localhost:3000/user/',
+             data: user,
+     
+             success: function (user) {
+                 alert("update Successful");
+                 window.location.href = '/index.html';    
+             },
+             error: function () {
+                 alert("regis");
+             }
+         });
+     });
   
       
   
