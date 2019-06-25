@@ -378,7 +378,7 @@ $(window).on('load', function () {
  
    <div class="form-inline">
 
-     <div class="avatar mx-3 white"><img src="D:\Privacy\edit 2.jpg" class="rounded-circle profi border border-primary"> 
+     <div class="avatar mx-3 white"><img src="http://localhost:3000/uploads/cc.png" class="rounded-circle profi border border-primary"> 
 
 </div>
       
@@ -394,7 +394,7 @@ $(window).on('load', function () {
    <div class="small-8 medium-2 large-2 columns mb-3">
      <div class="circle">
        <!-- User Profile Image -->
-       <img class="profile-pic" src="${pageContext.request.contextPath}/resources/images/${jobpsterimpl.primage}">
+       <img class="profile-pic" src="">
 
   <!-- <i class="fa fa-camera upload-button"></i> -->
        <!-- Default Image -->
@@ -417,9 +417,9 @@ $(window).on('load', function () {
         <h6 class="card-title">
       <!--  <div class="view mx-auto white mb-3"><img src="aa.jpg" class="rounded-circle img-fluid" style="height:120px;width:120px">
     </div> -->   
-<h6 class="indigo-text"> <strong> Bibash kc</strong></h6>
-<h6 class="indigo-text" style="font">20, 9808858910 , 1996-05-23</h6>
-<h6 class="indigo-text">bibash1996@gmail.com</h6>
+<h6 class="indigo-text" id="name"> <strong id="strongname">  </strong>&nbsp;<strong id="strongnames"></strong></h6>
+<h6 class="indigo-text" ><strong id="dob">  </strong>&nbsp;&nbsp;<strong id="number"></strong></h6>
+<h6 class="indigo-text" id="email" ></h6>
 
 
 
@@ -431,7 +431,7 @@ $(window).on('load', function () {
           <h6 class="indigo-text"><strong>
 
           </strong></h6>
-         <h6 class="indigo-text text-md-right" id="aasssssssd"><strong> <i class="fa fa-map-marker" aria-hidden="true"></i> Location</strong> &nbsp; kathmandu</h6>
+         <h6 class="indigo-text text-md-right" id="aasssssssd"><strong> <i class="fa fa-map-marker" aria-hidden="true"></i> Location</strong> &nbsp;<strong id="address"></strong></h6>
         <hr>
         <i class="fa fa-pencil prefix"></i>
      <label for="textareaPrefix"> <Strong> &emsp; Description: </Strong> </label> <br>
@@ -552,7 +552,7 @@ $(window).on('load', function () {
 </div>
 
 <!-- ---------------------------profile model------------------------- -->
-
+<!-- 
 <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
     <form action="Updatejbpstrtsecurityinfo" method="POST" >
@@ -568,7 +568,7 @@ $(window).on('load', function () {
                 <div class="md-form">
                     <i class="fa fa-envelope prefix grey-text"></i>
                      <label data-error="wrong" data-success="right" for="defaultForm-email"> <small>Username </small></label> <br>
-                    <input type="text" id="defaultForm-email" class="form-control validate" value="${jobpsterimpl.jobpostersecurity.username}" name="username">
+                    <input type="text" id="defaultForm-emails" class="form-control validate" value="${jobpsterimpl.jobpostersecurity.username}" name="username">
                    
                 </div>
 
@@ -576,7 +576,7 @@ $(window).on('load', function () {
                     <i class="fa fa-lock prefix grey-text"></i>
                       <label data-error="wrong" data-success="right" for="defaultForm-pass"><small>password </small></label> <br>
                     <input type="password" id="defaultForm-pass" class="form-control validate" value="${jobpsterimpl.jobpostersecurity.password}" name="password">
-                   <input type="text" id="defaultForm-pass" class="form-control validate" value="${jobpsterimpl.jobpostersecurity.jobtype}" name="jobtype">
+                   <input type="text" id="defaultForm-passs" class="form-control validate" value="${jobpsterimpl.jobpostersecurity.jobtype}" name="jobtype">
                 
                 </div>
                 <div class="md-form">
@@ -596,7 +596,7 @@ $(window).on('load', function () {
         </div>
         </form>
     </div>
-</div>
+</div> -->
 
 <!-- 	<script type="text/javascript">
 	function editstudent(id){
@@ -688,7 +688,7 @@ $(window).on('load', function () {
                   <div class="md-form">
                     <i class="fa fa-lock prefix grey-text"></i>
                       <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">D.O.B </small></label> <br>
-                    <input type="date" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.dob}" name="dob">
+                    <input type="date" id="defaultForm-pass" class="form-control validate mt-1" value="" name="dob">
                   
                 </div>
             
@@ -969,6 +969,6 @@ data-backdrop="false">
 
   </footer>
   <!-- Footer -->
-
+  <script src="js/profile.js"></script>
 </body>
 </html>

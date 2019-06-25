@@ -23,9 +23,15 @@ $("#login-btn").on('click', function (e) {
         data: user,
 
         success: function (user) {
-            alert("Login Successful");
-            window.location.href = 'jobslistpo.html';  
-            $('#login-form').trigger('reset');
+            if(user.publisher == true){
+            alert("welcome publisher,you are login in");
+            window.location.href = 'jobslistpoindividual.html';  
+           
+        }
+        else{
+alert("welcome seeker, you are logged in");
+window.location.href = 'jobslistpoindividual.html'; 
+        }
         },
         error: function () {
             alert("Fill all the form fields!");
