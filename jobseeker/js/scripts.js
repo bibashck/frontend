@@ -3,7 +3,7 @@ $(function () {
 
     let tblBody = $("#tblbody");
     let base_url = 'http://localhost:3000/';
-    let imageFile = '';
+    let imageFiles = '';
     $.ajaxSetup({
  xhrFields:{
      withCredentials: true
@@ -214,8 +214,12 @@ $("#update-job").on('click','.view', function (e) {
      });
     
      function rowTemplate(hero) {
-        let oneRow = '<div class="card-body">'+ '<img src= ' + base_url + "uploads/" + hero.image  + "width=50px>"+ ' <h6 class="card-title">Job name:&nbsp;'+hero.name + 
-        '</h6>' + '<p><small class="ml-1">job type:&nbsp; '+hero.JobType + '</p>'+'<b>Preference Skills: </b>'+hero.Description+'<br><br><b>Total Applicant: </b>'+hero.Applicant+'<p class="card-text mt-3"><b>Deadline: </b>'+hero.Deadline +'<br><b>Salary: </b>'+hero.Salary+'</div><hr>';
+        let oneRow = '<div class="card-body">'+ ' <h6 class="card-title">Job name:&nbsp;'+hero.name + 
+        '</h6>' + '<p><small class="ml-1">job type:&nbsp; '+hero.JobType + '</p>'+
+        '<b>Preference Skills: </b>'+hero.Description+'<br><br><b>Total Applicant: </b>'+
+        hero.Applicant+'<p class="card-text mt-3"><b>Deadline: </b>'+hero.Deadline +
+        '<br><b>Salary: </b>'+hero.Salary+'</div>';
+        oneRow += '<button type="button" class="btn btn-danger Applyjob" data-toggle="modal" data-target="#modalLRForms" apply_id=' + hero._id + ' id="applyform">Del</button><hr>';
       
         return oneRow;
     }
@@ -234,5 +238,45 @@ $("#update-job").on('click','.view', function (e) {
             alert('Something went wrong!');
         }
     });
+
+    tblBody.on('click', '#applyform', function () {
+
+       
+        
+        $.ajax({
+            type: 'GET',
+            url: base_url + 'jobposts/' + $(this).attr('apply_id'),
+            success: function (heroes) {
+                $("#postid").val(heroes._id);
+                // $("#update-job").attr("post_id",heroes._id);
+                // $("#update-job").val(heroes._id);
+    
+    
+     
+    {/* <label for="textareaPrefix">Job Description <small> ( Min 120 words required)</small></label> <br>
+                    <textarea type="text" id="description" class="form-control md-textarea" rows="8" minlength="120" required="required" name="jobdescription">hello</textarea> */}
+                 
+    // let asdad='<input type="text" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="Name">'+
+    // + '    <input type="text" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="Jobtype">'+
+    // '<input type="text" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="applicant">'+
+    // '<input type="text" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="Salary">'
+    // +'<input type="text" id="name" class="form-control" required="required" name="jobname" >'+heroes.name+'</input><br>'+'  <button type="button"  id="update-post" class="btn btn-danger update"  post_id=' + heroes._id + ' id="updatemeppsot">Submit</button>'
+                      
+    
+    
+        // $( "#tblbodys" ).append(asdad );
+    
+        
+        // $( "#updatemeppsot" ).append(heroes._id );
+    
+    
+            },
+            error: function () {
+                alert('Something went wrong!');
+            }
+        })
+        });
+     
+     
    
 });
