@@ -35,8 +35,9 @@ $(function () {
             $( "#image" ).append(user.image );
             $( "#Uname" ).append(user.username );
             $( "#country" ).append(user.Country );
-            $('#user_image').append('img src="http://localhost:3000/uploads/'+user.image + '" ');
-            address
+            $( "#descriptions" ).append(user.Description );
+           
+            $("#user_image").attr("src","http://localhost:3000/uploads/"+user.image);
 
  
         },
@@ -45,9 +46,9 @@ $(function () {
         }
     });
 
-    $("#imageupload").on('change', function () {
+    $("#image-upload").on('change', function () {
         let formData = new FormData();
-        let files = $("#imageupload").get(0).files;
+        let files = $("#image-upload").get(0).files;
         if (files.length > 0) {
             formData.append("imageFile", files[0]);
         }
@@ -84,7 +85,7 @@ $(function () {
          console.log(user);
          $.ajax({
              type: 'PUT',
-             url: 'http://localhost:3000/user/',
+             url: 'http://localhost:3000/user/updatemydata',
              data: user,
      
              success: function (user) {
@@ -98,43 +99,61 @@ $(function () {
      });
   
       
-  
-  
-//   tblBody.on('click','#updatejobpost', function () {
-  
-    
+     $("#btnclick").on('click', function () {
+
       
-//       $.ajax({
-//           type: 'GET',
-//           url: base_url + 'user/findmyonlydata',
-//           success: function (heroes) {
-  
-//               console.log("??????????????????????????????????????????????????????");
-  
-//               console.log(heroes);
-  
-//               console.log("??????????????????????????????????????????????????????");
-  
-//               $("#name").val(heroes.FirstName);
-//               $("#name").val(heroes.name);
-//               $("#JobType").val(heroes.JobType);
-//               $("#Applicant").val(heroes.Applicant);
-//               $("#Deadline").val(heroes.Deadline);
-//               $("#description").val(heroes.Description);
-//               $("#update-job").attr("post_id",heroes._id);
-//               // $("#update-job").attr("post_id",heroes._id);
-//               // $("#update-job").val(heroes._id);
-  
-  
-   
-//           },
-//           error: function () {
-//               alert('Something went wrong!');
-//           }
-//       });
+        
+        $.ajax({
+            type: 'GET',
+            url: base_url + 'user/findmyonlydata',
+            success: function (heroes) {
+    
+                $("#defaultForm-email").val(heroes.FirstName);
+                $("#defaultForm-pass").val(heroes.LastName);
+                $("#defaultForm-emails").val(heroes.email);
+                $("#defaultForm-dob").val(heroes.dob);
+                $("#defaultForm-number").val(heroes.contactnumber);
+                $("#description").val(heroes.Description);
+              
+                      },
+            error: function () {
+                alert('Something went wrong!');
+            }
+        })
+        });  
+ 
+      $("#user-update").on('click', function (e) {
 
-
-//       });
+        e.preventDefault();
+     
+        console.log("hello");
+     
+         let user = {
+            FirstName : $("#defaultForm-email").val(),
+            LastName: $("#defaultForm-pass").val(),
+            email: $("#defaultForm-emails").val(),
+            dob: $("#defaultForm-dob").val(),
+            contactnumber: $("#defaultForm-number").val(),
+            Description: $("#description").val(),
+                
+            
+          
+         };
+         console.log(user);
+         $.ajax({
+             type: 'PUT',
+             url: 'http://localhost:3000/user/updatemydata',
+             data: user,
+     
+             success: function (user) {
+                 alert("update Successful");
+                 window.location.href = '/index.html';    
+             },
+             error: function () {
+                 alert("regis");
+             }
+         });
+     });
   
   
   });

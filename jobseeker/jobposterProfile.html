@@ -394,7 +394,7 @@ $(window).on('load', function () {
    <div class="small-8 medium-2 large-2 columns mb-3">
      <div class="circle">
        <!-- User Profile Image -->
-       <img class="profile-pic" id="user_image">
+       <img class="profile-pic" id="user_image" src="">
 
   <!-- <i class="fa fa-camera upload-button"></i> -->
        <!-- Default Image -->
@@ -436,25 +436,8 @@ $(window).on('load', function () {
         <i class="fa fa-pencil prefix"></i>
      <label for="textareaPrefix"> <Strong> &emsp; Description: </Strong> </label> <br>
      <!-- <hr> -->
-<p class="pl-4"> 
-    I am one of the DBA in this huge IT industry with a desire to be a renowned DBA in this huge IT industry.
-    I am a workaholic person but with a friendly side and can't resist till I finish the assigned work.
-    I might get little strict but that is just because I like things to be as perfect as possible.
-    I like challenges and have a huge heart for SQL databases or SQL Projects.
-    
-    
-    Databases:
-    1. SQL-Server
-    2. Oracle
-    3. Mysql
-    4. MongoDB
-    5.Vertica
-    
-    Programming Languages:
-    1. Shell Scripting
-    2. Python
-    3. Powershell
-    4. C/C++
+<p class="pl-4" id="descriptions"> 
+  
 </p>
 
 
@@ -659,25 +642,25 @@ $(window).on('load', function () {
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-        <form role="form" action="updatejobpostjobposter" method="POST">
+        <form >
             <div class="modal-body mx-3">
                 <div class="md-form">
                     <i class="fa fa-envelope prefix grey-text"></i>
                      <label data-error="wrong" data-success="right" for="defaultForm-email"> <small class="indigo-text">Firstname </small></label> <br>
-                    <input type="text" id="defaultForm-email" class="form-control validate mt-1" value="${jobpsterimpl.firstname}" name="firstname">
+                    <input type="text" id="defaultForm-email" class="form-control validate mt-1" value="" name="firstname">
                    
                 </div>
 
                 <div class="md-form">
                     <i class="fa fa-lock prefix grey-text"></i>
                       <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">LastName </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.lastname}" name="lastname">
+                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="" name="lastname">
                   
                 </div>
                 <div class="md-form">
                     <i class="fa fa-lock prefix grey-text"></i>
                       <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">email </small></label> <br>
-                    <input type="email" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.email}" name="email">
+                    <input type="email" id="defaultForm-emails" class="form-control validate mt-1" value="" name="email">
 
 
                   
@@ -685,23 +668,28 @@ $(window).on('load', function () {
                   <div class="md-form">
                     <i class="fa fa-lock prefix grey-text"></i>
                       <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">D.O.B </small></label> <br>
-                    <input type="date" id="defaultForm-pass" class="form-control validate mt-1" value="" name="dob">
+                    <input type="date" id="defaultForm-dob" class="form-control validate mt-1" value="" name="dob">
                   
                 </div>
             
               <div class="md-form">
                     <i class="fa fa-lock prefix grey-text"></i>
                       <label data-error="wrong" data-success="right" for="defaultForm-pass"><small class="indigo-text">Contact No </small></label> <br>
-                    <input type="text" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.contactno}" name="contactno">
+                    <input type="text" id="defaultForm-number" class="form-control validate mt-1" value="" name="contactno">
                    <input type="hidden" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.primage}" name="primage">
             <input type="hidden" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.jobpostaddress.id}" name="jobpostaddress.id">
                          <input type="hidden" id="defaultForm-pass" class="form-control validate mt-1" value="${jobpsterimpl.jobpostersecurity.id}" name="jbpostadr_id">
                   
                 </div>
-
+                <div class="md-form">
+                  
+                  <label for="textareaPrefix">About you <small> ( Min 120 words required)</small></label> <br>
+              <textarea type="text" id="description" class="form-control md-textarea" rows="8" minlength="120" required="required" name="jobdescription"></textarea>
+          
+          </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-default" type="submit">Update</button>
+                <button id="user-update" class="btn btn-default" type="submit">Update</button>
             </div>
           </form> 
         </div>
@@ -766,7 +754,7 @@ $(window).on('load', function () {
                     <!-- <i class="fa fa-envelope prefix grey-text"></i> -->
                     <label data-error="wrong" data-success="right" for="form2">Upload Image</label><br> <br>
 
-                    <input id="imageupload" type="file" name="file[]">
+                    <input id="image-upload" type="file" name="file[]">
                   
                     
                 </div>
