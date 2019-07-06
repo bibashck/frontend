@@ -1,5 +1,6 @@
 $(document).ready(function(){
     let base_url = 'http://localhost:3000/';
+    let tblBody = $("#tblbody");
     $.ajaxSetup({
  xhrFields:{
      withCredentials: true
@@ -25,12 +26,12 @@ $("#login-btn").on('click', function (e) {
         success: function (user) {
             if(user.publisher == true){
             alert("welcome publisher,you are login in");
-            window.location.href = 'jobslistpoindividual.html';  
+            window.location.href = 'post.html';  
            
         }
         else{
 alert("welcome seeker, you are logged in");
-window.location.href = 'jobslistpoindividual.html'; 
+window.location.href = 'home.html'; 
         }
         },
         error: function () {
@@ -78,7 +79,7 @@ $("#Register-btn").on('click', function (e) {
         Country: $("#country").val(),
         dob: $("#dob").val(),
         Address: $("#Address").val(),
-        publisher: $('#publisher').val(),
+        publisher: $('#gender').val(),
         image: imageFile
     };
     console.log(user);
@@ -123,28 +124,27 @@ $("#submit-post").on('click', function (e) {
          }
      });
  });
- function rowTemplates(hero) {
-    let oneRow = '<div class="card-body">'+hero.description  
-    +'</div><hr>';
-  
-   
-    
-    return oneRow;
-}
-
-$.ajax({
-    type: 'GET',
-    url: base_url + 'post',
-    success: function (heroes) {
-        let myRows = [];
-        $.each(heroes, function (index, hero) {
-            myRows.push(rowTemplates(hero));
-        });
-        tblbody.append(myRows);
-    },
-    error: function () {
-        alert('Something went wrong!');
+    function rowTemplate(hero) {
+        let oneRow = '<div class="card-body">'+ ' <h6 class="card-title">Job name:&nbsp;'+hero.description + 
+        '</h6>' +'</div><hr>';
+       
+        return oneRow;
     }
-});
+
+    $.ajax({
+        type: 'GET',
+        url: base_url + 'post',
+        success: function (heroes) {
+            let myRows = [];
+            $.each(heroes, function (index, hero) {
+                myRows.push(rowTemplate(hero));
+            });
+            tblBody.append(myRows);
+        },
+        error: function () {
+            alert('Something went wrong!');
+        }
+    });
+
 
 });

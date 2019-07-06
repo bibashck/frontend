@@ -165,7 +165,7 @@ $(document).ready(function(){
     
         <div class="container">
   
-          <a class="navbar-brand js-scroll-trigger" href="#page-top"><div style="height:60px;width:85px" class="ml-auto">
+          <a class="navbar-brand js-scroll-trigger" href="home.html"><div style="height:60px;width:85px" class="ml-auto">
             <img src="images/logo.png" style="height:40px;width:120px"><!-- <h3>RuAin </h3> --> </a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -189,27 +189,22 @@ $(document).ready(function(){
             <ul class="navbar-nav ml-auto">
   
               <li class="nav-item">
-                <a class="nav-link text-dark js-scroll-trigger" href="post.html"><h6><Strong> home </Strong></h6></a>
+                <a class="nav-link text-dark js-scroll-trigger" href="home.html"><h6><Strong> home </Strong></h6></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong>Find jobs </Strong></h6></a>
+                <a class="nav-link text-dark js-scroll-trigger" href="findjobs.html"><h6><Strong>Find jobs </Strong></h6></a>
               </li>
-             <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="jobslistJobSeekeerindappliedjobs.html"><h6><Strong>Manage Jobs </Strong></h6></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="postedit.html"><h6><Strong>manage post </Strong></h6></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>postjob </Strong></h6></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="booking.html"><h6><Strong>Job seeker </Strong></h6></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
-            </li>
              
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="seekerjobedit.html"><h6><Strong>manage post </Strong></h6></a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="seekerbooking.html"><h6><Strong>Applied job</Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="jobseekersprofile.html"><h6><Strong>Profile</Strong> </h6> </a>
+            </li>
                
                <!-- Dropdown -->
               <li class="nav-item dropdown ml-3">
@@ -217,12 +212,12 @@ $(document).ready(function(){
   
   
                    <!-- <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="18" alt=""> -->
-                     <img src="images/logo.png" style="height:30px;width:30px" class="rounded-circle img-fluid img-thumbnail">
+                     <img src="images/default_user.png" style="height:30px;width:30px" class="rounded-circle img-fluid img-thumbnail">
                    </a>
                   <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="jobposterProfile.html"><small>Profile </small></a>
                       <a class="dropdown-item" href="jobposterProfile.html"><small>Account Setting </small></a>
-                      <a class="dropdown-item" id="logout"><small>Logout </small></a>
+                      <a class="dropdown-item" href="${pageContext.request.contextPath}/getlogout"><small>Logout </small></a>
                        
                      
                   </div>

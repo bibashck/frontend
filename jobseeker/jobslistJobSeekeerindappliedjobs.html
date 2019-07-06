@@ -186,21 +186,26 @@ $(document).ready(function(){
             <ul class="navbar-nav ml-auto">
   
               <li class="nav-item">
-                <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
+                <a class="nav-link text-dark js-scroll-trigger" href="post.html"><h6><Strong> home </Strong></h6></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>Post Jobs</Strong> </h6> </a>
+                <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong>Find jobs </Strong></h6></a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong>Manage job post </Strong></h6></a>
-                </li>
-               <li class="nav-item">
-                <a class="nav-link text-dark js-scroll-trigger" href="jobslistJobSeekeerindappliedjobs.html"><h6><Strong>Manage Jobs </Strong></h6></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/getpostjobsportal"><h6><Strong>Others </Strong></h6></a>
-              </li>
-             
+             <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="jobslistJobSeekeerindappliedjobs.html"><h6><Strong>Manage Jobs </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="postedit.html"><h6><Strong>manage post </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>postjob </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="booking.html"><h6><Strong>Job seeker </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
+            </li>
                
                <!-- Dropdown -->
               <li class="nav-item dropdown ml-3">
@@ -213,7 +218,7 @@ $(document).ready(function(){
                   <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="jobposterProfile.html"><small>Profile </small></a>
                       <a class="dropdown-item" href="jobposterProfile.html"><small>Account Setting </small></a>
-                      <a class="dropdown-item" href="${pageContext.request.contextPath}/getlogout"><small>Logout </small></a>
+                      <a class="dropdown-item" id="logout"><small>Logout </small></a>
                        
                      
                   </div>
@@ -488,5 +493,6 @@ $(document).ready(function(){
   </footer>
   <!-- Footer -->
   <script src="js/script.js"></script>
+  <script src="js/logout.js"></script>
 </body>
 </html>

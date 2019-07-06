@@ -203,13 +203,22 @@ $(function () {
             <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>Post Jobs</Strong> </h6> </a>
           </li> -->
           <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong> job post </Strong></h6></a>
+              <a class="nav-link text-dark js-scroll-trigger" href="post.html"><h6><Strong> home </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong>Find jobs </Strong></h6></a>
             </li>
            <li class="nav-item">
             <a class="nav-link text-dark js-scroll-trigger" href="jobslistJobSeekeerindappliedjobs.html"><h6><Strong>Manage Jobs </Strong></h6></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/getpostjobsportal"><h6><Strong>Others </Strong></h6></a>
+            <a class="nav-link text-dark js-scroll-trigger" href="postedit.html"><h6><Strong>manage post </Strong></h6></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>postjob </Strong></h6></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark js-scroll-trigger" href="booking.html"><h6><Strong>Job seeker </Strong></h6></a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
@@ -226,7 +235,7 @@ $(function () {
               <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="jobposterProfile.html"><small>Profile </small></a>
                   <a class="dropdown-item" href="jobposterProfile.html"><small>Account Setting </small></a>
-                  <a class="dropdown-item" href="${pageContext.request.contextPath}/getlogout"><small>Logout </small></a>
+                  <a class="dropdown-item" id="logout"><small>Logout </small></a>
                    
                  
               </div>
@@ -258,7 +267,11 @@ $(function () {
           
           <div class="input-group mt-2" data-toggle="tooltip" data-placement="bottom" title="Search Jobs">
           
-            <button id="add-jobs" submit-post class="button__trigger" type="submit" data-toggle="modal" data-target="#modalLRForm" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a job post?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            <button id="add-jobs" submit-post class="button__trigger"
+             type="submit" data-toggle="modal" data-target="#modalLRForm" >
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a post?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
    
 
 
@@ -269,36 +282,35 @@ $(function () {
                   </div>
    
 
-<!-- Card -->
-<!-- item is used to hold data -->
-	
 
-<div class="container">
-
-
-  
-    <Div id="tblbody"><hr></div>
+  <div class="container">
   
   
-     
-  
-  
-      <!-- Button -->
-      <!-- <a href="#" class="btn btn-primary">Button</a> -->
-  
-    </div>
-    <!-- <hr> -->
-    <hr>
-   
-  </div>
-  </c:forEach> 
-  <!-- Card -->
-  
-         
-  
+    <table class="table col-sm-12">
+      <thead>
+       
+      </thead>
+      <div class="card-body"><tbody id="tblbody"><hr></tbody></table></div>
+    </table>
+    
+       
+    
+    
+        <!-- Button -->
+        <!-- <a href="#" class="btn btn-primary">Button</a> -->
+    
       </div>
-  </div>
-  
+      <!-- <hr> -->
+      <hr>
+     
+    </div>
+    </c:forEach> 
+    <!-- Card -->
+    
+           
+    
+        </div>
+    </div>
 
    
 	
@@ -323,7 +335,7 @@ $(function () {
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Update</a>
+                        <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> say somethings</a>
                     </li>
              
                 </ul>
@@ -337,7 +349,7 @@ $(function () {
           <form role="form"  >
               <div class="md-form">
                  
-                      <label for="textareaPrefix">Job Description <small> ( Min 120 words required)</small></label> <br>
+                      <label for="textareaPrefix">your description <small> ( Min 50 words required)</small></label> <br>
                   <textarea type="text" id="description" class="form-control md-textarea" rows="8" minlength="120" required name="jobdescription"></textarea>
               
               </div>
@@ -504,5 +516,6 @@ $(function () {
   <!-- Footer -->
  
   <script src="js/scriptlog.js"></script>
+  <script src="js/logout.js"></script>
 </body>
 </html>

@@ -136,7 +136,7 @@
   color: #988;
   /*margin-left:50px;*/
   
-}
+  
 .trigger {
   padding: 1px 10px;
   font-size: 12px;
@@ -284,7 +284,7 @@ $(window).on('load', function () {
     
       <div class="container">
 
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><div style="height:60px;width:85px" class="ml-auto">
+        <a class="navbar-brand js-scroll-trigger" href="home.html"><div style="height:60px;width:85px" class="ml-auto">
           <img src="images/logo.png" style="height:40px;width:120px"><!-- <h3>RuAin </h3> --> </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -307,25 +307,21 @@ $(window).on('load', function () {
   <!-- this is for the search -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="post.html"><h6><Strong> home </Strong></h6></a>
+              <a class="nav-link text-dark js-scroll-trigger" href="home.html"><h6><Strong> home </Strong></h6></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong>Find jobs </Strong></h6></a>
+              <a class="nav-link text-dark js-scroll-trigger" href="findjobs.html"><h6><Strong>Find jobs </Strong></h6></a>
             </li>
-           <li class="nav-item">
-            <a class="nav-link text-dark js-scroll-trigger" href="jobslistJobSeekeerindappliedjobs.html"><h6><Strong>Manage Jobs </Strong></h6></a>
+           
+          <li class="nav-item">
+            <a class="nav-link text-dark js-scroll-trigger" href="seekerjobedit.html"><h6><Strong>manage post </Strong></h6></a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link text-dark js-scroll-trigger" href="seekerbooking.html"><h6><Strong>Applied job</Strong></h6></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark js-scroll-trigger" href="postedit.html"><h6><Strong>manage post </Strong></h6></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark js-scroll-trigger" href="PostJobs.html"><h6><Strong>postjob </Strong></h6></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark js-scroll-trigger" href="booking.html"><h6><Strong>Job seeker </Strong></h6></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
+            <a class="nav-link text-dark js-scroll-trigger" href="jobseekersprofile.html"><h6><Strong>Profile</Strong> </h6> </a>
           </li>
              
              <!-- Dropdown -->
@@ -334,12 +330,12 @@ $(window).on('load', function () {
 
 
                  <!-- <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="18" alt=""> -->
-                   <img src="images/logo.png" style="height:30px;width:30px" class="rounded-circle img-fluid img-thumbnail">
+                   <img src="images/default_user.png" style="height:30px;width:30px" class="rounded-circle img-fluid img-thumbnail">
                  </a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="jobposterProfile.html"><small>Profile </small></a>
                     <a class="dropdown-item" href="jobposterProfile.html"><small>Account Setting </small></a>
-                    <a class="dropdown-item" id="logout"><small>Logout </small></a>
+                    <a class="dropdown-item" href="${pageContext.request.contextPath}/getlogout"><small>Logout </small></a>
                      
                    
                 </div>
@@ -466,7 +462,7 @@ $(window).on('load', function () {
     <div class="flex-row">
     <!--    <a href="#!" class="badge badge-primary">Primary</a> <br> -->
         <a class="trigger info-color text-white pt-1 pb-1" data-toggle="modal" data-target="#modalchangeimage" data-toggle="tooltip" data-placement="bottom" title="Change Profile">Change Profile<i class="fa fa-plus ml-2"></i></a> <br><br>
-    <a class="trigger info-color text-white pt-1 pb-1"  data-toggle="tooltip" data-placement="bottom" title="Delete Account">Delete Account<i class="fa fa-plus ml-2"></i></a> <br><br>
+    <a class="trigger info-color text-white pt-1 pb-1" onclick="deleteAccount(${jobpsterimpl.id})" data-toggle="tooltip" data-placement="bottom" title="Delete Account">Delete Account<i class="fa fa-plus ml-2"></i></a> <br><br>
  
        <a class="trigger info-color text-white pt-1 pb-1" href="${pageContext.request.contextPath}/getlogout" data-toggle="tooltip" data-placement="bottom" title="Logout">Log Out<i class="fa fa-plus ml-2"></i></a>
        <!--  <a class="card-link">Another link</a> <br> -->
@@ -959,6 +955,5 @@ data-backdrop="false">
   </footer>
   <!-- Footer -->
   <script src="js/profile.js"></script>
-  <script src="js/logout.js"></script>
 </body>
 </html>
