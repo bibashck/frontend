@@ -107,7 +107,7 @@ $("#update-job").on('click','.view', function (e) {
             Deadline: $("#Deadline").val(),
             Salary: $("#Salary").val(),
             Description: $("#description").val(),
-            image: imageFiles
+            
          };
          console.log(user);
          $.ajax({
@@ -219,7 +219,7 @@ $("#update-job").on('click','.view', function (e) {
         '<b>Preference Skills: </b>'+hero.Description+'<br><br><b>Total Applicant: </b>'+
         hero.Applicant+'<p class="card-text mt-3"><b>Deadline: </b>'+hero.Deadline +
         '<br><b>Salary: </b>'+hero.Salary+'</div>';
-        oneRow += '<button type="button" class="btn btn-danger Applyjob" data-toggle="modal" data-target="#modalLRForms" apply_id=' + hero._id + ' id="applyform">Del</button><hr>';
+        oneRow += '<button type="button" class="btn btn-danger Applyjob" data-toggle="modal" data-target="#modalLRForms" apply_id=' + hero._id + ' id="applyform">Apply job</button><hr>';
       
         return oneRow;
     }

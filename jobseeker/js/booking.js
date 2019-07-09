@@ -22,7 +22,7 @@ xhrFields:{
   function rowTemplate(hero) {
     let oneRow = "<tr><td>"+hero.user.username + 
     "</td><td>"  +hero.cv +"</td><td>"+hero.number+"</td><td>"
-    +hero.Salary +"</td><td>"+hero.Description+"</td>";
+    +hero.jobpost.name +"</td><td>"+hero.jobpost.Deadline+"</td>";
    
   
     return oneRow;

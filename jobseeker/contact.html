@@ -2,166 +2,159 @@
 
 <html lang="en">
 
-<head>
-  <title>
-
- Shangrila Jobseeker</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
-   <!-- Custom styles for this template -->
-    <!-- <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet"> -->
- <link rel="icon" href="resources/Bootstrap/Pics/ru1.jpg" type="image/jpg" sizes="32x32"> 
-<!--  <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
-
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Bootstrap core CSS -->
-
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
-
-
-
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
- <!-- yo chai text transformation ko  lagi  -->
-
- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <head>
+    <title>
+  
+   Shangrila Jobseeker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-
-  }
- </style>
-</head>
-<body>
-  <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="mainNav">
-    
-      <div class="container">
-
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><div style="height:60px;width:85px" class="ml-auto">
-        	<img src="${pageContext.request.contextPath}/resources/Pics/ru4.jpg" style="height:60px;width:100%"><!-- <h3>RuAin </h3> --> </a>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+     <!-- Custom styles for this template -->
+      <!-- <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+   <link rel="icon" href="resources/Bootstrap/Pics/ru1.jpg" type="image/jpg" sizes="32x32"> 
+  <!--  <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+  
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+  
+  
+  
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+   <!-- yo chai text transformation ko  lagi  -->
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      
+  
+    }
+   </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="mainNav">
+      
+        <div class="container">
+  
+          <a class="navbar-brand js-scroll-trigger" href="index.html"><div style="height:60px;width:85px" class="ml-auto">
+            <img src="images/logo.png" style="height:50px;width:150px"><!-- <h3>RuAin </h3> --> </a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <!-- this is for the search -->
+            <form class="form-inline">
+     
+    </form>
+  
+    <!-- this is for the search -->
+            <ul class="navbar-nav ml-auto">
+  
+              <li class="nav-item">
+                <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/#howitwrks"><h5>How it works ? </h5> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark js-scroll-trigger" data-toggle="modal" data-target="#modalLRForm" href="#login"><h5>Login </h5></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark js-scroll-trigger" data-toggle="modal" data-target="#modalPush" href="#signup"><h5>SignUp </h5></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark js-scroll-trigger" href="#contactlinjmp"><h5>Contact </h5></a>
+              </li>
+            </ul>
+  
+          </div>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon "></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-        	<!-- this is for the search -->
-        	<form class="form-inline">
-    <div class="input-group">
-
-
-      <input type="text" class="form-control glyphicon glyphicon-search " placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
-    </div>
-  </form>
-
-  <!-- this is for the search -->
-          <ul class="navbar-nav ml-auto">
-
-          	<li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/#howitwrks"><h5>How it works ? </h5> </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" data-toggle="modal" data-target="#modalLRForm" href="#login"><h5>Login </h5></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" data-toggle="modal" data-target="#modalPush" href="#signup"><h5>SignUp </h5></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark js-scroll-trigger" href="#contactlinjmp"><h5>Contact </h5></a>
-            </li>
-          </ul>
-
         </div>
-      </div>
-      </div>
-    </nav>
-    <!-- pb means here p means padding and b means botton after text or written the paaddng is set 0 -->
-
-
-<div class="container-fluid mt-5 pt-2 unique-color-dark">
-	<ul class="nav">
-  <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="#"><Strong>Customer Service </Strong></a>
-  </li>
-  <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="#trndjbs"><strong>Trending Jobs </strong></a>
-  </li>
-  <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="#"><strong>News </strong></a>
-  </li>
-
-  <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="#"><strong>Inquiries </strong></a>
-  </li>
-  <li class="nav-item ml-2">
-   <!--  <a class="nav-link text-white" href="redirectotadmin"> <strong> Admin</strong></a> -->
-      <a class="nav-link text-white" data-toggle="modal" data-target="#modalloginformvv"> <strong> Admin</strong></a>
-    
-  </li>
-  <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="#"><strong> Direction </strong></a>
-  </li>
-  <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="#"> <strong>About Us </strong></a>
-  </li>
-  <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="#"><strong> FAQ </strong></a>
-  </li>
-   <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="resources/Mannual.pdf"><strong>Help </strong></a>
-  </li>
+      </nav>
+      <!-- pb means here p means padding and b means botton after text or written the paaddng is set 0 -->
+  
+  
+  <div class="container-fluid mt-5 pt-2 unique-color-dark">
+    <ul class="nav">
     <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#modalforgetpassword"><strong>Forgot Password</strong></a>
-  </li>
+      <a class="nav-link text-white" href="#"><Strong>Customer Service </Strong></a>
+    </li>
+   
+  
+    <li class="nav-item ml-2">
+      <a class="nav-link text-white" href="contact.html"><strong>Inquiries </strong></a>
+    </li>
+    <li class="nav-item ml-2">
+     <!--  <a class="nav-link text-white" href="redirectotadmin"> <strong> Admin</strong></a> -->
+        <a class="nav-link text-white" data-toggle="modal" data-target="#modalloginformvv"> <strong> Admin</strong></a>
+      
+    </li>
+    <li class="nav-item ml-2">
+      <a class="nav-link text-white" href="location.html"><strong> Direction </strong></a>
+    </li>
+    <li class="nav-item ml-2">
+      <a class="nav-link text-white" href="about us.html"> <strong>About Us </strong></a>
+    </li>
+    <li class="nav-item ml-2">
+      <a class="nav-link text-white" href="#"><strong> FAQ </strong></a>
+    </li>
+     <li class="nav-item ml-2">
+      <a class="nav-link text-white" href="JobSeekerManual-JobPortal-converted.pdf"><strong>Help </strong></a>
+    </li>
+    
+  
+   
+  </ul>
+  
+  </div>
 
- 
-</ul>
+<script>
+  $(document).ready(function() {
+  $("#basic-form").validate();
+});
+  </script>
 
-</div>
-<hr>
 <!-- Default form contact -->
-<form class="text-center border border-light p-5">
+<form class="text-center border border-light p-5" name="messages" id="basic-form">
 
   <p class="h4 mb-4">Contact us</p>
 
   <!-- Name -->
-  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+  <input type="text" id="defaultContactFormName" data-validation="name" data-validation="required" class="form-control validate" placeholder="Name" aria-required="true">
 
   <!-- Email -->
-  <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+  <input type="email" id="defaultContactFormEmail" data-validation="email" data-validation="required" class="form-control mb-4" placeholder="E-mail" required>
 
   <!-- Subject -->
   <label>Subject</label>
-  <select class="browser-default custom-select mb-4">
+  <select id="type" class="browser-default custom-select mb-4" required>
       <option value="" disabled>Choose option</option>
-      <option value="1" selected>Feedback</option>
-      <option value="2">Report a bug</option>
-      <option value="3">Feature request</option>
-      <option value="4">Feature request</option>
+      <option value="Feedback" selected>Feedback</option>
+      <option value="Report a bug">Report a bug</option>
+      <option value="Feature request">Feature request</option>
+      <option value="message">Feature request</option>
   </select>
 
   <!-- Message -->
   <div class="form-group">
-      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" required rows="3" placeholder="Message"></textarea>
   </div>
 
   <!-- Copy -->
-  <div class="custom-control custom-checkbox mb-4">
-      <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-      <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
-  </div>
-
   <!-- Send button -->
-  <button class="btn btn-info btn-block" type="submit">Send</button>
+  <button id=message class="btn btn-info btn-block" type="submit">Send</button>
 
 </form>
+
 <!-- Default form contact -->
 
 <div class="modal fade" id="modalloginformvv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -426,7 +419,7 @@
           <form role="form"  >
                         <div class="modal-body mb-1">
 
-<
+
 
                          <!-- Default input -->
 <label for="exampleForm2">Username : </label>
@@ -443,14 +436,7 @@
 
 </form>
                         <!--Footer-->
-                        <div class="modal-footer">
-                            <div class="options text-center text-md-right mt-1">
-                                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
-                        <div class="g-recaptcha" data-sitekey="6LdRCWMUAAAAAAND_CKF2U3tUx0nFKmrZr083JYb"></div>
-                                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
-<!--                                
- -->                              
-                            </div>
+                       
                             <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
                         </div>
 
@@ -543,7 +529,6 @@ Are you Job Seeker or Job Poster ? <br>
 
 
 
-
 <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -552,8 +537,10 @@ Are you Job Seeker or Job Poster ? <br>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script src="js/scriptlog.js"></script>
+        <script src="js/message.js"></script>
+     
 
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
 </body>
   

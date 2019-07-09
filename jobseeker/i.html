@@ -1,11 +1,13 @@
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
 
 <head>
   <title>
 
- Shangrila Jobseeker</title>
+  RuAin</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
@@ -45,8 +47,8 @@
     
       <div class="container">
 
-        <a class="navbar-brand js-scroll-trigger" href="index.html"><div style="height:60px;width:85px" class="ml-auto">
-        	<img src="images/logo.png" style="height:50px;width:150px"><!-- <h3>RuAin </h3> --> </a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><div style="height:60px;width:85px" class="ml-auto">
+        	<img src="${pageContext.request.contextPath}/resources/Pics/ru4.jpg" style="height:60px;width:100%"><!-- <h3>RuAin </h3> --> </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon "></span>
@@ -54,7 +56,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
         	<!-- this is for the search -->
         	<form class="form-inline">
-   
+    <div class="input-group">
+
+
+      <input type="text" class="form-control glyphicon glyphicon-search " placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+    </div>
   </form>
 
   <!-- this is for the search -->
@@ -86,10 +92,15 @@
   <li class="nav-item ml-2">
     <a class="nav-link text-white" href="#"><Strong>Customer Service </Strong></a>
   </li>
- 
+  <li class="nav-item ml-2">
+    <a class="nav-link text-white" href="#trndjbs"><strong>Trending Jobs </strong></a>
+  </li>
+  <li class="nav-item ml-2">
+    <a class="nav-link text-white" href="#"><strong>News </strong></a>
+  </li>
 
   <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="contact.html"><strong>Inquiries </strong></a>
+    <a class="nav-link text-white" href="#"><strong>Inquiries </strong></a>
   </li>
   <li class="nav-item ml-2">
    <!--  <a class="nav-link text-white" href="redirectotadmin"> <strong> Admin</strong></a> -->
@@ -97,18 +108,20 @@
     
   </li>
   <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="location.html"><strong> Direction </strong></a>
+    <a class="nav-link text-white" href="#"><strong> Direction </strong></a>
   </li>
   <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="about us.html"> <strong>About Us </strong></a>
+    <a class="nav-link text-white" href="#"> <strong>About Us </strong></a>
   </li>
   <li class="nav-item ml-2">
     <a class="nav-link text-white" href="#"><strong> FAQ </strong></a>
   </li>
    <li class="nav-item ml-2">
-    <a class="nav-link text-white" href="JobSeekerManual-JobPortal-converted.pdf"><strong>Help </strong></a>
+    <a class="nav-link text-white" href="resources/Mannual.pdf"><strong>Help </strong></a>
   </li>
-  
+    <li class="nav-item ml-2">
+    <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#modalforgetpassword"><strong>Forgot Password</strong></a>
+  </li>
 
  
 </ul>
@@ -766,11 +779,11 @@ the suitable jobs and apply for  it.
           <p>
             <i class="fa fa-home mr-3"></i> Ktm, Tinkune Subhidhanagar, NP</p>
           <p>
-            <i class="fa fa-envelope mr-3"></i> bibash@gmail.com</p>
+            <i class="fa fa-envelope mr-3"></i> Rupeshevil617@gmail.com</p>
           <p>
-            <i class="fa fa-phone mr-3"></i> + 9808858910</p>
+            <i class="fa fa-phone mr-3"></i> + 9811136827</p>
           <p>
-            <i class="fa fa-print mr-3"></i> + 9779843950422</p>
+            <i class="fa fa-print mr-3"></i> + 945784532</p>
         </div>
         <!-- Grid column -->
 
@@ -786,9 +799,9 @@ the suitable jobs and apply for  it.
         <div class="col-md-7 col-lg-8">
 
           <!--Copyright-->
-          <p class="text-center text-md-left">ï¿½ 2018 Copyright:
+          <p class="text-center text-md-left">© 2018 Copyright:
             <a href="https://mdbootstrap.com/bootstrap-tutorial/">
-              <strong> Shangrila: Find Relevant jobs</strong>
+              <strong> RuAin: Find Relevant jobs</strong>
             </a>
           </p>
 
@@ -875,9 +888,9 @@ the suitable jobs and apply for  it.
   
             <!--Footer-->
             <div class="modal-footer flex-center">
-                <a href="jobpostersignupp.html" class="btn btn-primary ">Job Poster</a>
-                <a type="button" href="jobseekersignupp.html" class="btn btn-outline-primary waves-effect" >Job Seeker</a>
-            <a href="redirectotadmin"></a>
+                <a href="${pageContext.request.contextPath}/linktojobpostersignup" class="btn btn-primary ">Job Poster</a>
+                <a type="button" href="${pageContext.request.contextPath}/linktojobseekersignup" class="btn btn-outline-primary waves-effect" >Job Seeker</a>
+            <a href="redirectotadmin">sfdsfds</a>
             </div>
         </div>
         <!--/.Content-->
@@ -901,41 +914,58 @@ the suitable jobs and apply for  it.
                     </li>
              
                 </ul>
-                <script>
-                  function validateForm() {
-                    var x = document.forms["myForm"]["username"].value;
-                    if (x == "") {
-                      alert("Name must be filled out");
-                      return false;
-                    }
-                  }
-                  </script>
+
                 <!-- Tab panels -->
                 <div class="tab-content">
                     <!--Panel 7-->
                     <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
 
                         <!--Body-->
-          <form name="myform"  role="form" onsubmit="return validateform()"  >
+          <form role="form" action="${pageContext.request.contextPath}/userloginjbsek" method="post">
                         <div class="modal-body mb-1">
 
+<h6>Are you JobSeeker or JobPoster  <span class="badge indigo">?</span></h6>
 
+                        	<!-- Group of material radios - option 1 -->
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="materialGroupExample1" name="jobtype" value="jobposter">
+  <label class="form-check-label" for="materialGroupExample1">Job Poster</label>
+</div>
+
+<!-- Group of material radios - option 2 -->
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="materialGroupExample2" name="jobtype" value="jobseeker">
+  <label class="form-check-label" for="materialGroupExample2">Job Seeker</label>
+</div>
+<br>
 
                          <!-- Default input -->
 <label for="exampleForm2">Username : </label>
-<input type="text" id="username" name="username"  class="form-control validate">
+<input type="text" id="exampleForm2" name="username" class="form-control">
                         </div>
                               <div class="modal-body mb-1">
                          <!-- Default input -->
 <label for="exampleForm2">Password : </label>
-<input type="password" id="pass" name="password"  class="form-control validate">
+<input type="password" id="exampleForm2" name="password" class="form-control">
                         </div>
                      <div class="text-center">
-<button type="submit" class="btn btn-outline-primary btn-rounded waves-effect" id="login-btn">Login</button>
+<button type="submit" class="btn btn-outline-primary btn-rounded waves-effect">Login</button>
 </div>
 
 </form>
-                       
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <div class="options text-center text-md-right mt-1">
+                                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                        <div class="g-recaptcha" data-sitekey="6LdRCWMUAAAAAAND_CKF2U3tUx0nFKmrZr083JYb"></div>
+                                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+<!--                                
+ -->                              
+                            </div>
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
                     <!--/.Panel 7-->
 
                   
@@ -1019,31 +1049,13 @@ Are you Job Seeker or Job Poster ? <br>
 
 </div>
 
-<script>  
-  function validateform(){  
-  var username=document.myform.name.value;  
-  var password=document.myform.password.value;  
-    
-  if (username==null || username==""){  
-    alert("Name can't be blank");  
-    return false;  
-  }else if(pass.length<6){  
-    alert("Password must be at least 6 characters long.");  
-    return false;  
-    }  
-  }  
-  </script> 
 
 
-<script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-        <script src="js/scriptlog.js"></script>
+
+
+
+
+
 
 
 </body>

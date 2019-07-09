@@ -6,10 +6,10 @@
 <head>
   <title>
 
-  job poster</title>
+  seeker</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
  <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
    <!-- Custom styles for this template -->
@@ -21,7 +21,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
     <!-- Font Awesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Bootstrap core CSS -->
@@ -249,8 +249,9 @@ $(document).ready(function () {
                 <div class="col-sm-7 offset-sm-2">
 <div>
   <!-- pt-4 pb-5 mb-5 -->
-                  <h2 class="text-center font-bold pt-1 pb-0 mb-0"><strong>Sign Up as job poster</strong> </h2>
-                 </div>
+                  <h2 class="text-center font-bold pt-1 pb-0 mb-0"><strong>Sign Up as job seeker </strong> </h2>
+                
+</div>
 <!-- Stepper -->
 <div class="steps-form-2">
     <div class="steps-row-2 setup-panel-2 d-flex justify-content-between">
@@ -272,14 +273,18 @@ $(document).ready(function () {
 <!-- First Step -->
 <div class="container">
 
-  
+        <script>
+                $(document).ready(function() {
+                $("#basic-form").validate();
+              });
+                </script> 
             </p>
             <p class="divider-text"></p>
-            <form>
+            <form id="basic-form">
                     <form enctype="multipart/form-data" id="fileUploadForm">
                         
                        
-                        <input class="fa fa-camera upload-button" type="file"  id="image-upload" />
+                        <input class="fa fa-camera upload-button" type="file"  id="fileToUpload" />
                       </form><br>
                       <div class="form-group md-form">
                             <label for="fname" data-error="wrong" data-success="right">Username <small>(required)</small></label> <br>
@@ -292,32 +297,36 @@ $(document).ready(function () {
                         
                         </div>
                         <div class="form-group md-form">
-                                <label for="fname" data-error="wrong" data-success="right">Organization Name <small>(required)</small></label> <br>
+                                <label for="fname" data-error="wrong" data-success="right">First Name  <small>(required)</small></label> <br>
                                 <input id="firstname" name="firstname"type="text" required="required" class="form-control validate" required>
                             </div>
-                                   <div class="form-group md-form mt-3">
+                            <div class="form-group md-form">
+                                <label for="lname" data-error="wrong" data-success="right">LastName <small>(required)</small></label> <br>
+                                <input id="lastname"name="lastname" type="text" required="required" class="form-control validate" required>
+                                <div class="form-group md-form mt-3">
                                         <label for="repeatPassword-2" data-error="wrong" data-success="right">Email <small>(required)</small></label> <br>
-                                        <input id="email" type="email" required="required" name="email" class="form-control validate">
+                                        <input id="email" type="email" data-validation="email" data-validation="required"  required="required" name="email" class="form-control validate">
                                     </div>
                                     <div class="form-group md-form mt-3">
                                             <label for="repeatPassword-2" data-error="wrong" data-success="right">Address <small>(required)</small></label> <br>
-                                            <input id="Address" type="email" required="required" name="email" class="form-control validate" required="required">
+                                            <input id="Address" type="email" required="required" name="email" class="form-control validate">
                                         </div>
-                                  
+                                    <div class="form-group md-form mt-3">
+                                            <label for="yourPassword-2" data-error="wrong" data-success="right">D.O.B <small>(required)</small></label> <br>
+                                            <input id="dob" type="date" required="required" name="dob" class="form-control validate" required>
+                                        </div>
                                         <div class="form-group md-form mt-3">
                                                 <label for="repeatPassword-2" data-error="wrong" data-success="right">Contact No <small>(required)</small></label> <br>
                                                 <input id="contactno" type="number" required="required" name="contactno" class="form-control validate">
                                             </div>
                                 <div class="form-group md-form">
                                         <label for="yourName-2" data-error="wrong" data-success="right">Country</label> <br>
-                                        <input id="country" type="text" required="required" name="jobpostaddress.country" class="form-control validate" required="required">
-                                        <input id="publisher" type="text" required="required" hidden class="form-control validate" value="true" required="required"> 
-                      
+                                        <input id="country" type="text" required="required" name="jobpostaddress.country" class="form-control validate">
                                     </div>
-                           
+                                   
                             </div>
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block"id="Register-btn"> Create Account </button>
+                    <button class="btn btn-primary btn-block"id="Register-seekerbtn"> Create Account </button>
                 </div> <!-- form-group// -->
                 <p class="text-center">Have an account? <a href="index.html">Log In</a> </p>
             </form>

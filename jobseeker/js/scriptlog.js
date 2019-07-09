@@ -1,6 +1,7 @@
 $(document).ready(function(){
     let base_url = 'http://localhost:3000/';
     let tblBody = $("#tblbody");
+    let imageFile = '';
     $.ajaxSetup({
  xhrFields:{
      withCredentials: true
@@ -9,6 +10,7 @@ $(document).ready(function(){
 
 
 $("#login-btn").on('click', function (e) {
+   
    e.preventDefault();
    console.log("hello");
    console.log("username");
@@ -35,7 +37,7 @@ window.location.href = 'home.html';
         }
         },
         error: function () {
-            alert("Fill all the form fields!");
+            alert("either username or password is incorrect");
         }
     });
 });
@@ -62,24 +64,58 @@ $("#fileToUpload").on('change', function () {
         }
     });
 });
+$("#Register-seekerbtn").on('click', function (e) {
+
+    e.preventDefault();
+ 
+    console.log("hello");
+    notempty(id);
+     let user = {
+         username: $("#user").val(),
+         password: $("#pass-repeat").val(),
+         FirstName: $("#firstname").val(),
+         LastName: $("#lastname").val(),
+         contactnumber: $("#contactno").val(),
+         email: $("#email").val(),
+         Country: $("#country").val(),
+        
+         Address: $("#Address").val(),
+        
+         image: imageFile
+     };
+     console.log(user);
+     $.ajax({
+         type: 'POST',
+         url: 'http://localhost:3000/users/signup',
+         data: user,
+ 
+         success: function (user) {
+             alert("Registration Successful");
+             window.location.href = '/index.html';    
+         },
+         error: function () {
+             alert("fill all form ");
+         }
+     });
+ });
 
 $("#Register-btn").on('click', function (e) {
 
    e.preventDefault();
 
    console.log("hello");
-
+ 
     let user = {
         username: $("#user").val(),
         password: $("#pass-repeat").val(),
         FirstName: $("#firstname").val(),
-        LastName: $("#lastname").val(),
+       
         contactnumber: $("#contactno").val(),
         email: $("#email").val(),
         Country: $("#country").val(),
         dob: $("#dob").val(),
         Address: $("#Address").val(),
-        publisher: $('#gender').val(),
+        publisher: $('#publisher').val(),
         image: imageFile
     };
     console.log(user);
@@ -98,6 +134,18 @@ $("#Register-btn").on('click', function (e) {
     });
 });
 
+function notempty(id){
+
+    var value = $("users"+id).val();
+
+    var len = value.length;
+
+    if (len < 1){
+        return false;
+    }else{
+        return true;
+    }
+}
 $("#submit-post").on('click', function (e) {
 
     e.preventDefault();

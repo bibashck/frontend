@@ -147,7 +147,7 @@ $(function () {
      
              success: function (user) {
                  alert("update Successful");
-                 window.location.href = '/index.html';    
+                 window.location.href = '/jobposterProfile.html';    
              },
              error: function () {
                  alert("regis");
